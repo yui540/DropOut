@@ -1,0 +1,38 @@
+{
+  "name": "DropOut",
+  "version": "6.0.0",
+  "description": "yuki540.com v6 「DropOut」",
+  "main": "webpack.config.babel.js",
+  "scripts": {
+    "build": "npx webpack --progress --colors",
+    "watch": "npx webpack --watch --progress --colors",
+    "start": "ruby -run -e httpd public 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuki540net/DropOut.git"
+  },
+  "keywords": [
+    "yuki540",
+    "yuki540.com"
+  ],
+  "author": "yuki540",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuki540net/DropOut/issues"
+  },
+  "homepage": "https://github.com/yuki540net/DropOut#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "node-sass-glob-importer": "^5.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "webpack": "^3.11.0"
+  }
+}
