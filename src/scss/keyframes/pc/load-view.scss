@@ -1,0 +1,149 @@
+/*** dire-left ***/
+@keyframes load-view__dire-left-1 {
+  0%   { opacity: 0.1; }
+  5%   { opacity: 0.1; }
+  15%  { opacity: 1; }
+  25%  { opacity: 1; }
+  35%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-left-2 {
+  0%   { opacity: 0.1; }
+  15%  { opacity: 0.1; }
+  25%  { opacity: 1; }
+  35%  { opacity: 1; }
+  45%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-left-3 {
+  0%   { opacity: 0.1; }
+  25%  { opacity: 0.1; }
+  35%  { opacity: 1; }
+  45%  { opacity: 1; }
+  55%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+
+/*** dire-bottom ***/
+@keyframes load-view__dire-bottom-1 {
+  0%   { opacity: 0.1; }
+  25%  { opacity: 0.1; }
+  35%  { opacity: 1; }
+  45%  { opacity: 1; }
+  55%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-bottom-2 {
+  0%   { opacity: 0.1; }
+  35%  { opacity: 0.1; }
+  45%  { opacity: 1; }
+  55%  { opacity: 1; }
+  65%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-bottom-3 {
+  0%   { opacity: 0.1; }
+  45%  { opacity: 0.1; }
+  55%  { opacity: 1; }
+  65%  { opacity: 1; }
+  75%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+
+/*** dire-right ***/
+@keyframes load-view__dire-right-1 {
+  0%   { opacity: 0.1; }
+  45%  { opacity: 0.1; }
+  55%  { opacity: 1; }
+  65%  { opacity: 1; }
+  75%  { opacity: 0.1; }
+}
+@keyframes load-view__dire-right-2 {
+  0%   { opacity: 0.1; }
+  55%  { opacity: 0.1; }
+  65%  { opacity: 1; }
+  75%  { opacity: 1; }
+  85%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-right-3 {
+  0%   { opacity: 0.1; }
+  65%  { opacity: 0.1; }
+  75%  { opacity: 1; }
+  85%  { opacity: 1; }
+  95%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+
+/*** dire-top ***/
+@keyframes load-view__dire-top-1 {
+  0%   { opacity: 0.1; }
+  60%  { opacity: 0.1; }
+  70%  { opacity: 1; }
+  80%  { opacity: 1; }
+  90%  { opacity: 0.1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-top-2 {
+  0%   { opacity: 0.1; }
+  70%  { opacity: 0.1; }
+  80%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { opacity: 0.1; }
+}
+@keyframes load-view__dire-top-3 {
+  0%   { opacity: 0.1; }
+  80%  { opacity: 0.1; }
+  90%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/*** rect-bar ***/
+@keyframes load-view__rect-bar1 {
+  0%   { transform: translateX(100%); }
+  40%  { transform: translateX(-100%); }
+  100% { transform: translateX(-100%); }
+}
+@keyframes load-view__rect-bar2 {
+  0%   { transform: translateY(-100%); }
+  20%  { transform: translateY(-100%); }
+  60%  { transform: translateY(100%); }
+  100% { transform: translateY(100%); }
+}
+@keyframes load-view__rect-bar3 {
+  0%   { transform: translateX(-100%); }
+  40%  { transform: translateX(-100%); }
+  80%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes load-view__rect-bar4 {
+  0%   { transform: translateY(100%); }
+  60%  { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+/*** rect-effect ***/
+@keyframes load-view__rect-effect1 {
+  0%   { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  20%  { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  32%  { opacity: 1; transform: scale(1.8); border-width: 0px; }
+  100% { opacity: 1; transform: scale(1.8); border-width: 0px; }
+}
+@keyframes load-view__rect-effect2 {
+  0%   { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  40%  { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  52%  { opacity: 1; transform: scale(1.8); border-width: 0px; }
+  100% { opacity: 1; transform: scale(1.8); border-width: 0px; }
+}
+@keyframes load-view__rect-effect3 {
+  0%   { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  60%  { opacity: 0; transform: scale(0.5); border-width: 20px; }
+  72%  { opacity: 1; transform: scale(1.8); border-width: 0px; }
+  100% { opacity: 1; transform: scale(1.8); border-width: 0px; }
+}
+@keyframes load-view__rect-effect4 {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(0); }
+  80%  { transform: scale(0); }
+  100% { transform: scale(1); }
+}

@@ -60,23 +60,35 @@
         .left {
           top: 6px;
           div { border-right: solid 25px #fff; }
+          div:nth-child(1) { animation: load-view__dire-left-3 3s linear 0s infinite; }
+          div:nth-child(2) { animation: load-view__dire-left-2 3s linear 0s infinite; }
+          div:nth-child(3) { animation: load-view__dire-left-1 3s linear 0s infinite; }
         }
         
         /** right **/
         .right {
           bottom: 6px;
           div { border-left: solid 25px #fff; }
+          div:nth-child(1) { animation: load-view__dire-right-1 3s linear 0s infinite; }
+          div:nth-child(2) { animation: load-view__dire-right-2 3s linear 0s infinite; }
+          div:nth-child(3) { animation: load-view__dire-right-3 3s linear 0s infinite; }
         }
 
         /** bottom **/
         .bottom {
           left: 6px;
           div { border-top: solid 25px #fff; }
+          div:nth-child(1) { animation: load-view__dire-bottom-1 3s linear 0s infinite; }
+          div:nth-child(2) { animation: load-view__dire-bottom-2 3s linear 0s infinite; }
+          div:nth-child(3) { animation: load-view__dire-bottom-3 3s linear 0s infinite; }
         }
         /** top **/
         .top {
           right: 6px;
           div { border-bottom: solid 25px #fff; }
+          div:nth-child(1) { animation: load-view__dire-top-3 3s linear 0s infinite; }
+          div:nth-child(2) { animation: load-view__dire-top-2 3s linear 0s infinite; }
+          div:nth-child(3) { animation: load-view__dire-top-1 3s linear 0s infinite; }
         }
       }
 
@@ -169,6 +181,20 @@
             right: 0;
             &::after { transform: translateY(100%); }
           }
+          
+          // animation ----------------------------------------------------------------------
+          div:nth-child(1) { &::after {
+            animation: load-view__rect-bar1 3s linear 0s infinite;
+          }}
+          div:nth-child(2) { &::after {
+            animation: load-view__rect-bar2 3s linear 0s infinite;
+          }}
+          div:nth-child(3) { &::after {
+            animation: load-view__rect-bar3 3s linear 0s infinite;
+          }}
+          div:nth-child(4) { &::after {
+            animation: load-view__rect-bar4 3s linear 0s infinite;
+          }}
         }
 
         /** effect **/
@@ -183,6 +209,7 @@
             width: 50px; height: 50px;
             background-color: #fff;
             border-radius: 50%;
+            animation: load-view__rect-effect4 3s linear 0s infinite;
           }
 
           div:nth-child(1),
@@ -198,6 +225,11 @@
           div:nth-child(1) { top: -23.5px; left: -23.5px; }
           div:nth-child(2) { bottom: -23.5px; left: -23.5px; }
           div:nth-child(3) { bottom: -23.5px; right: -23.5px; }
+
+          // animation --------------------------------------------------------------------
+          div:nth-child(1) { animation: load-view__rect-effect1 3s linear 0s infinite; }
+          div:nth-child(2) { animation: load-view__rect-effect2 3s linear 0s infinite; }
+          div:nth-child(3) { animation: load-view__rect-effect3 3s linear 0s infinite; }
         }
       }
       
