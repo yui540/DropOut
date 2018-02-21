@@ -243,6 +243,134 @@
         border-radius: 8px;
       }
     }
+
+    /**
+     * display
+     */
+    .display {
+      position: absolute;
+      top: 125px; left: 125px;
+      width: calc(100% - 250px); height: calc(100% - 250px);
+
+      /*** bg ***/
+      .bg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        div {
+          position: absolute;
+          left: 0;
+          border-radius: 20px;
+          width: 100%; height: calc(50% - 1px);
+          opacity: 0.7;
+
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            background-color: $theme-light-pink;
+          }
+        }
+        div:nth-child(1) {
+          top: 0; background-color: $theme-light-purple;
+          &::before { top: -7.5px; left: -7.5px; }
+          &::after  { top: -7.5px; right: -7.5px; }
+        }
+        div:nth-child(2) {
+          bottom: 0; background-color: $theme-pink;
+          &::before { bottom: -7.5px; left: -7.5px; }
+          &::after  { bottom: -7.5px; right: -7.5px; }
+        }
+      }
+
+      /*** blocks ***/
+      .blocks {
+        position: absolute;
+        top: calc(50% - 100px); left: calc(50% - 350px);
+        width: 700px; height: 200px;
+
+        .block {
+          position: absolute;
+          width: 110px; height: 110px;
+          background-color: #fff;
+          box-shadow: 0 0 10px #444;
+          transform: rotate(45deg);
+          opacity: 0;
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 5px; left: 5px;
+            width: 100px; height: 100px;
+            box-sizing: border-box;
+            border: dashed 2px $theme-pink;
+          }
+          div {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            border: solid 40px $theme-light-pink;
+            box-sizing: border-box;
+            opacity: 0;
+          }
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: rotate(-45deg);
+            opacity: 0;
+          }
+        }
+        .block:nth-child(1) {
+          top: 0; left: 0;
+          &::after { background-image: url(../images/load-view/charcters/char-1.png); }
+        }
+        .block:nth-child(2) {
+          bottom: 0; left: 100px;
+          &::after { background-image: url(../images/load-view/charcters/char-2.png); }
+        }
+        .block:nth-child(3) {
+          top: 0; left: 200px;
+          &::after { background-image: url(../images/load-view/charcters/char-3.png); }
+        }
+        .block:nth-child(4) {
+          bottom: 0; left: 300px;
+          &::after { background-image: url(../images/load-view/charcters/char-4.png); }
+        }
+        .block:nth-child(5) {
+          top: 0; left: 400px;
+          &::after { background-image: url(../images/load-view/charcters/char-5.png); }
+        }
+        .block:nth-child(6) {
+          bottom: 0; left: 500px;
+          &::after { background-image: url(../images/load-view/charcters/char-6.png); }
+        }
+        .block:nth-child(7) {
+          top: 0; left: 600px;
+          &::after { background-image: url(../images/load-view/charcters/char-7.png); }
+        }
+
+        // animation -------------------------------------------------------------------
+        .block:nth-child(1) { animation: load-view__block1 0.5s ease 0.0s forwards; }
+        .block:nth-child(2) { animation: load-view__block2 0.5s ease 0.1s forwards; }
+        .block:nth-child(3) { animation: load-view__block1 0.5s ease 0.2s forwards; }
+        .block:nth-child(4) { animation: load-view__block2 0.5s ease 0.3s forwards; }
+        .block:nth-child(5) { animation: load-view__block1 0.5s ease 0.4s forwards; }
+        .block:nth-child(6) { animation: load-view__block2 0.5s ease 0.5s forwards; }
+        .block:nth-child(7) { animation: load-view__block1 0.5s ease 0.6s forwards; }
+      }
+    }
   }
 
   #load-view[data-state="fin"] {
