@@ -369,6 +369,35 @@
         .block:nth-child(5) { animation: load-view__block1 0.5s ease 0.4s forwards; }
         .block:nth-child(6) { animation: load-view__block2 0.5s ease 0.5s forwards; }
         .block:nth-child(7) { animation: load-view__block1 0.5s ease 0.6s forwards; }
+        
+        .block[data-state="true"]:nth-child(1) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char1 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(2) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char2 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(3) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char3 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(4) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char4 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(5) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char5 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(6) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char6 0.8s ease 0s forwards; }
+        }
+        .block[data-state="true"]:nth-child(7) {
+          div      { animation: load-view__block-effect 0.5s ease 0s forwards; }
+          &::after { animation: load-view__char7 0.8s ease 0s forwards; }
+        }
       }
 
       /*** progress-bar ***/
