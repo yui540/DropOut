@@ -10,7 +10,7 @@ import preload_json from './config/preload'
 
 setTimeout(() => {
   testPreload(() => {
-    
+    util.finisheLoadView()
   }, (per) => {
     util.updateCharPanel(per)
     util.updateProgressBar(per)

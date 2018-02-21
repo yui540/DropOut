@@ -1,3 +1,4 @@
+const load_view = document.getElementById('load-view')
 const char_panel = document.querySelectorAll('.blocks .block')
 const progress_bar = document.getElementById('progress-bar')
 
@@ -77,4 +78,11 @@ export const updateCharPanel = (per) => {
  */
 export const updateProgressBar = (per) => {
   progress_bar.children[0].style.width = `${ per * 100 }%`
+}
+
+/**
+ * モーションパート
+ */
+export const finisheLoadView = () => {
+  load_view.setAttribute('data-state', 'fin')
 }
