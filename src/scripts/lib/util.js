@@ -1,3 +1,6 @@
+const char_panel = document.querySelectorAll('.blocks .block')
+const progress_bar = document.getElementById('progress-bar')
+
 /**
  * 画像のプリロード
  * @param images   : 画像パスの配列
@@ -52,4 +55,26 @@ export const hiddenTimeout = (selector, time) => {
   setTimeout(() => {
     document.querySelector(selector).style.display = 'none'
   }, time)
+}
+
+/**
+ * キャラクターパネルの更新
+ * @param per : 割合
+ */
+export const updateCharPanel = (per) => {
+  if(per >= 0.14) char_panel[0].setAttribute('data-state', 'true')
+  if(per >= 0.28) char_panel[1].setAttribute('data-state', 'true')
+  if(per >= 0.42) char_panel[2].setAttribute('data-state', 'true')
+  if(per >= 0.57) char_panel[3].setAttribute('data-state', 'true')
+  if(per >= 0.71) char_panel[4].setAttribute('data-state', 'true')
+  if(per >= 0.85) char_panel[5].setAttribute('data-state', 'true')
+  if(per >= 1.00) char_panel[6].setAttribute('data-state', 'true')
+}
+
+/**
+ * プログレスバーの更新
+ * @param per : 割合
+ */
+export const updateProgressBar = (per) => {
+  progress_bar.children[0].style.width = `${ per * 100 }%`
 }
