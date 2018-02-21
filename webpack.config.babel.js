@@ -35,7 +35,12 @@ const css = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract([
-          { loader: 'css-loader' },
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          },
           {
             loader: 'sass-loader',
             options: {
