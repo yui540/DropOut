@@ -690,5 +690,110 @@
       &::before { animation: load-view___fail-paint 0.75s ease 2.6s forwards; }
       &::after  { animation: load-view___fail-paint 0.75s ease 2.8s forwards; }
     }
+    
+    /**
+     * catchcopy
+     */
+    .catchcopy {
+      animation:
+        fadein 0.3s ease 3.55s forwards,
+        load-view__catchcopy-bg1 0.4s ease 4.5s forwards,
+        load-view__catchcopy-bg2 0.4s ease 5.4s forwards,
+        load-view__catchcopy-bg3 0.4s ease 6.8s forwards;
+
+      .text-box {
+        .text-split:nth-child(1) {
+          .figure {
+            div:nth-child(1) {
+              animation:
+                load-view__figure1-1 0.4s ease 3.6s forwards,
+                fadeout 0.4s ease 4.5s forwards;
+            }
+            div:nth-child(2) {
+              &::after {
+                animation:
+                  load-view__figure1-1 0.4s ease 3.8s forwards,
+                  fadeout 0.4s ease 4.5s forwards;
+              }
+            }
+            div:nth-child(3) {
+              animation:
+                load-view__figure1-3 0.5s ease 4.0s forwards,
+                fadeout 0.4s ease 4.5s forwards;
+            }
+          }
+          .text { animation: load-view__catchcopy 0.4s ease 4.5s forwards; }
+        }
+        .text-split:nth-child(2) {
+          .figure {
+            div:nth-child(1) {
+              &::before { 
+                animation:
+                  load-view__figure2-1 0.4s ease 4.5s forwards,
+                  fadeout 0.4s ease 5.4s forwards;
+              }
+              &::after { 
+                animation:
+                  load-view__figure2-1 0.4s ease 4.6s forwards,
+                  fadeout 0.4s ease 5.4s forwards;
+              }
+            }
+            div:nth-child(2) {
+              animation:
+                load-view__figure2-2 0.5s ease 4.8s forwards,
+                fadeout 0.4s ease 5.4s forwards;
+            }
+            div:nth-child(3) {
+              animation:
+                load-view__figure2-3 0.4s ease 5s forwards,
+                fadeout 0.4s ease 5.4s forwards;
+            }
+          }
+          .text { animation: load-view__catchcopy 0.4s ease 5.4s forwards; }
+        }
+        .text-split:nth-child(3) {
+          .figure {
+            div:nth-child(1) {
+              animation:
+                load-view__figure3-1 0.5s ease 5.4s forwards,
+                fadeout 0.4s ease 6.8s forwards;
+            }
+            div:nth-child(2) {
+              animation:
+                load-view__figure3-2 0.4s ease 5.6s forwards,
+                fadeout 0.4s ease 6.8s forwards;
+            }
+            div:nth-child(3) {
+              &::before {
+                animation:
+                  load-view__figure3-3 0.4s ease 5.8s forwards,
+                  fadeout 0.4s ease 6.8s forwards;
+              }
+              &::after {
+                animation:
+                  load-view__figure3-3 0.4s ease 5.9s forwards,
+                  fadeout 0.4s ease 6.8s forwards;
+              }
+            }
+            div:nth-child(4) {
+              animation:
+                load-view__figure3-1 0.5s ease 6.0s forwards,
+                fadeout 0.4s ease 6.8s forwards;
+            }
+            div:nth-child(5) {
+              animation:
+                load-view__figure3-2 0.4s ease 6.2s forwards,
+                fadeout 0.4s ease 6.8s forwards;
+            }
+            div:nth-child(6) {
+              animation:
+                load-view__figure3-6 0.4s ease 6.4s forwards,
+                fadeout 0.4s ease 6.8s forwards;
+            }
+          }
+          .text { animation: load-view__catchcopy 0.4s ease 6.8s forwards; }
+        }
+      }
+    }
   }
 }
