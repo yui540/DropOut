@@ -847,6 +847,83 @@
         }
       }
     }
+
+    /**
+     * battle-panel
+     */
+    .battle-panel {
+      position: absolute;
+      top: calc(50% - 200px);
+      left: calc(50% - 300px);
+      width: 600px; height: 400px;
+      transform: rotate(5deg);
+      z-index: 7;
+
+      /*** player ***/
+      .player {
+        position: absolute;
+        width: 417px; height: 250px;
+        background-color: #fff;
+        box-shadow: 0 0 10px #888;
+        opacity: 0;
+
+        div {
+          position: absolute;
+          top: 10px; left: 10px;
+          width: calc(100% - 20px); height: calc(100% - 20px);
+          overflow: hidden;
+
+          &::after {
+            content: ""; display: block;
+            width: 100%; height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+            background-size: 100%;
+          }
+        }
+      }
+      .player:nth-child(1) {
+        top: -70px; right: -100px;
+        div {
+          transform: rotate(2deg);
+          background-color: $theme-light-purple;
+          &::after { background-image: url(../images/load-view/battle/1.png); }
+        }
+      }
+      .player:nth-child(2) {
+        bottom: -70px; left: -100px;
+        div {
+          transform: rotate(-2deg);
+          background-color: $theme-pink;
+          &::after { background-image: url(../images/load-view/battle/2.png); }
+        }
+      }
+
+      /*** cross ***/
+      .cross {
+        position: absolute;
+        top: calc(50% - 130px); left: calc(50% - 130px);
+        width: 260px; height: 260px;
+        background-color: $theme-pink;
+        border-radius: 50%;
+        transform: rotate(-5deg);
+        box-shadow: 0 0 10px #444;
+        transform: scale(0);
+
+        &::before,
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 115px; left: 40px;
+          width: 180px; height: 30px;
+          background-color: $theme-bg;
+          border-radius: 10px;
+          opacity: 0;
+        }
+        &::before { transform: rotate(45deg); }
+        &::after  { transform: rotate(-45deg); }
+      }
+    }
   }
 
   #load-view[data-state="fin"] {
