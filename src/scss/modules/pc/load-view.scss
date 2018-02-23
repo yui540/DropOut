@@ -829,6 +829,13 @@
           .text { animation: load-view__catchcopy 0.4s ease 6.8s forwards; }
         }
       }
+      
+      /*** arrows ***/
+      .arrows {
+        .arrow:nth-child(1) { div { animation: load-view__arrow 0.8s ease 3.6s forwards; } }
+        .arrow:nth-child(2) { div { animation: load-view__arrow 0.9s ease 4.5s forwards; } }
+        .arrow:nth-child(3) { div { animation: load-view__arrow 1.7s ease 5.4s forwards; } }
+      }
     }
   }
 }

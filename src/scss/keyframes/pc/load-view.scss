@@ -324,5 +324,12 @@
 }
 @keyframes load-view__catchcopy-bg3 {
   0%   { background-color: #9994A6; }
-  100% { background-color: $theme-pink; }
+  100% { background-color: $theme-gray; }
+}
+
+
+/*** arrow ***/
+@keyframes load-view__arrow {
+  0%   { transform: translateX(calc(-100% - 3px)); }
+  100% { transform: translateX(0%); }
 }
