@@ -890,5 +890,23 @@
         .arrow:nth-child(3) { div { animation: load-view__arrow 1.7s ease 5.4s forwards; } }
       }
     }
+    
+    /**
+     * ribbons
+     */
+    .ribbons {
+      .ribbon:nth-child(1) {
+        div:nth-child(2) { &::after { animation: load-view__ribbon-1 0.9s ease 3.6s forwards;  } }
+        div:nth-child(3) { &::after { animation: load-view__ribbon-2 0.9s ease 4.5s forwards;  } }
+        div:nth-child(4) { &::after { animation: load-view__ribbon-3 1.4s ease 5.4s forwards;  } }
+        div:nth-child(1) { &::after { animation: load-view__ribbon-4 0.6s ease 6.8s forwards;  } }
+      }
+      .ribbon:nth-child(2) {
+        div:nth-child(2) { &::after { animation: load-view__ribbon-1 0.9s ease 3.7s forwards;  } }
+        div:nth-child(3) { &::after { animation: load-view__ribbon-2 0.9s ease 4.6s forwards;  } }
+        div:nth-child(4) { &::after { animation: load-view__ribbon-3 1.4s ease 5.5s forwards;  } }
+        div:nth-child(1) { &::after { animation: load-view__ribbon-4 0.6s ease 6.9s forwards;  } }
+      }
+    }
   }
 }

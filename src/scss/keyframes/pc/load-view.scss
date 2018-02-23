@@ -333,3 +333,22 @@
   0%   { transform: translateX(calc(-100% - 3px)); }
   100% { transform: translateX(0%); }
 }
+
+
+/*** ribbon ***/
+@keyframes load-view__ribbon-1 {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes load-view__ribbon-2 {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+@keyframes load-view__ribbon-3 {
+  0%   { transform: translateY(100%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes load-view__ribbon-4 {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
