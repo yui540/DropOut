@@ -924,6 +924,24 @@
         &::after  { transform: rotate(-45deg); }
       }
     }
+
+    /**
+     * end-load-view
+     */
+    .end-load-view {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 8;
+
+      div {
+        position: absolute;
+        top: 0; left: 50%;
+        width: 0%; height: 100%;
+      }
+      div:nth-child(1) { background-color: $theme-light-purple; }
+      div:nth-child(2) { background-color: $theme-light-pink; }
+    }
   }
 
   #load-view[data-state="fin"] {
