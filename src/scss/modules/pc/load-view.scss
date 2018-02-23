@@ -1135,5 +1135,41 @@
         &::after  { animation: load-view__collision-effect2 0.6s ease 9s forwards; }
       }
     }
+    
+    /**
+     * battle-panel
+     */
+    .battle-panel {
+      /*** player ***/
+      .player:nth-child(1) {
+        animation:
+          load-view__player1 1.4s ease 12.5s forwards,
+          load-view__player1 0.8s ease 13.4s reverse forwards;
+        div { &::after { animation: load-view__player-scale 0.8s ease-out 12.5s forwards; } }
+      }
+      .player:nth-child(2) {
+        animation:
+          load-view__player2 1.4s ease 12.5s forwards,
+          load-view__player2 0.8s ease 13.4s reverse forwards;
+        div { &::after { animation: load-view__player-scale 0.8s ease-out 12.5s forwards; } }
+      }
+
+      /*** cross ***/
+      .cross {
+        animation:
+          load-view__circle 0.4s ease 12.5s forwards,
+          load-view__circle 0.4s ease 13.9s reverse forwards;
+        &::before {
+          animation:
+            load-view__cross1 0.4s ease 12.6s forwards,
+            load-view__cross1 0.4s ease 13.8s reverse forwards;
+        }
+        &::after {
+          animation:
+            load-view__cross2 0.4s ease 12.6s forwards,
+            load-view__cross2 0.4s ease 13.8s reverse forwards;
+        }
+      }
+    }
   }
 }
