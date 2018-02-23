@@ -444,3 +444,10 @@
   0%   { transform: scale(0) rotate(-5deg); }
   100% { transform: scale(1) rotate(-5deg); }
 }
+
+
+/*** end ***/
+@keyframes load-view__end {
+  0%   { left: 50%; width: 0; }
+  100% { left: 0%; width: 100%; }
+}
