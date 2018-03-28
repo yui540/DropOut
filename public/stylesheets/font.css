@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Boku';
+  src: url('font/Boku.ttf') format('truetype');
+  src: url('font/Boku.otf') format('opentype');
+}
+  
+@font-face {
+  font-family: 'Chibit';
+  src: url('font/chibit.ttf') format('truetype');
+  src: url('font/chibit.otf') format('opentype');
+}
+ 
+@font-face {
+  font-family: 'Nagomi';
+  src: url('font/nagomi.ttf') format('truetype');
+  src: url('font/nagomi.otf') format('opentype');
+}
