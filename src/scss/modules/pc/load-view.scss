@@ -1,0 +1,65 @@
+@include pc-layout {
+  .load-view {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    min-width: $min-width; min-height: $min-height;
+    background-color: $theme-pink;
+  }
+
+  /**
+   * frame
+   */
+  .load-view__frame {
+    position: absolute;
+    top: 20px; left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+  }
+
+  /*** squares ***/
+  .load-view__frame-squares {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    div {
+      position: absolute;
+      width: 40px; height: 40px;
+      border: dashed 3px #fff;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    div:nth-child(1) { top: 0; left: 0; }
+    div:nth-child(2) { top: 0; right: 0; }
+    div:nth-child(3) { bottom: 0; left: 0; }
+    div:nth-child(4) { bottom: 0; right: 0; }
+  }
+
+  /*** lines ***/
+  .load-view__frame-lines {
+    position: absolute;
+    top: 37px; left: 37px;
+    width: calc(100% - 74px);
+    height: calc(100% - 74px);
+
+    div {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    div:nth-child(1),
+    div:nth-child(3) {
+      left: 0; width: 100%; height: 3px;
+      border-top: dashed 3px #fff;
+    }
+    div:nth-child(2),
+    div:nth-child(4) {
+      top: 0; width: 1px; height: 100%;
+      border-left: dashed 3px #fff;
+    }
+    div:nth-child(1) { top: 0; }
+    div:nth-child(3) { bottom: 0; }
+    div:nth-child(2) { left: 0; }
+    div:nth-child(4) { right: 0; }
+  }
+}
