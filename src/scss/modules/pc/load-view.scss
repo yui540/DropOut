@@ -62,4 +62,26 @@
     div:nth-child(2) { left: 0; }
     div:nth-child(4) { right: 0; }
   }
+
+  /**
+   * body
+   */
+  .load-view__body {
+    position: absolute;
+    top: 80px; left: 80px;
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+
+    &::before,
+    &::after {
+      content: ""; display: block;
+      position: absolute;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      border-radius: 5px;
+      background-color: rgba(255,255,255,0.2);
+    }
+    &::before { top: 0; left: 0; }
+    &::after  { bottom: 0; right: 0; }
+  }
 }
