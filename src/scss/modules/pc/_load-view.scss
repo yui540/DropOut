@@ -68,11 +68,11 @@
    */
   .load-view__body {
     position: absolute;
-    top: 80px; left: 80px;
-    width: calc(100% - 160px);
-    height: calc(100% - 160px);
+    top: 0px; left: 0px;
+    width: 100%; height: 100%;
   }
 
+  /*** bg ***/
   .load-view__body__bg {
     position: absolute;
     top: 0; left: 0;
@@ -82,12 +82,139 @@
     &::after {
       content: ""; display: block;
       position: absolute;
-      width: calc(100% - 20px);
-      height: calc(100% - 20px);
+      width: calc(100% - 180px);
+      height: calc(100% - 180px);
       border-radius: 5px;
       background-color: rgba(255,255,255,0.2);
     }
-    &::before { top: 0; left: 0; }
-    &::after  { bottom: 0; right: 0; }
+    &::before { top: 80px; left: 80px; }
+    &::after  { bottom: 80px; right: 80px; }
+  }
+
+  /*** panel ***/
+  .load-view__body__panel {
+    position: absolute;
+    top: 0; left: calc(50% - 450px);
+    width: 900px; height: 100%;
+  }
+
+  /*** panel__icon ***/
+  .load-view__body__panel__icon {
+    position: absolute;
+    top: calc(50% - 60px);
+    width: 120px; height: 120px;
+    opacity: 0;
+
+    .box {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 8px; left: 8px;
+        width: calc(100% - 16px); height: calc(100% - 16px);
+        box-sizing: border-box;
+        border: solid 2px transparent;
+      }
+
+      .frame {
+        position: absolute;
+        width: 40%; height: 40%;
+
+        &::before,
+        &::after { content: ""; display: block; position: absolute; }
+        &::before { width: 100%; height: 8px; }
+        &::after { width: 8px; height: 100%; }
+      }
+      .frame:nth-child(1) {
+        top: 0; right: 0;
+        &::before, &::after { top: 0; right: 0; }
+      }
+      .frame:nth-child(2) {
+        bottom: 0; left: 0;
+        &::before, &::after { bottom: 0; left: 0; }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 25px; left: 25px;
+      width: calc(100% - 50px); height: calc(100% - 50px);
+      background-size: 150%;
+      background-position: center;
+    }
+  }
+  .load-view__body__panel__icon_type_1 {
+    left: 84px;
+    .box {
+      &::after { border-color: $theme-pink; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-pink; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/1.png); }
+  }
+  .load-view__body__panel__icon_type_2 {
+    left: 288px;
+    .box {
+      &::after { border-color: $theme-light-purple; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-light-purple; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/2.png); }
+  }
+  .load-view__body__panel__icon_type_3 {
+    right: 288px;
+    .box {
+      &::after { border-color: $theme-light-pink; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-light-pink; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/3.png); }
+  }
+  .load-view__body__panel__icon_type_4 {
+    right: 84px;
+    .box {
+      &::after { border-color: $theme-purple; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-purple; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/4.png); }
+  }
+
+  /* animation *********************************************************************************/
+  .load-view__body__panel__icon { .box { animation: rotate360 3s linear 0s infinite; } }
+  .load-view__body__panel__icon_type_1 {
+    animation:
+      fadein 0.8s ease 0s forwards,
+      load-view__show-wait-icon 0.8s ease 0s forwards;
+    .icon { animation: load-view__scale-wait-icon 1s ease 0s forwards; }
+  }
+  .load-view__body__panel__icon_type_2 {
+    animation:
+      fadein 0.8s ease 0.3s forwards,
+      load-view__show-wait-icon 0.8s ease 0.3s forwards;
+    .icon { animation: load-view__scale-wait-icon 1s ease 0.3s forwards; }
+  }
+  .load-view__body__panel__icon_type_3 {
+    animation:
+      fadein 0.8s ease 0.6s forwards,
+      load-view__show-wait-icon 0.8s ease 0.6s forwards;
+    .icon { animation: load-view__scale-wait-icon 1s ease 0.6s forwards; }
+  }
+  .load-view__body__panel__icon_type_4 {
+    animation:
+      fadein 0.8s ease 0.9s forwards,
+      load-view__show-wait-icon 0.8s ease 0.9s forwards;
+    .icon { animation: load-view__scale-wait-icon 1s ease 0.9s forwards; }
   }
 }

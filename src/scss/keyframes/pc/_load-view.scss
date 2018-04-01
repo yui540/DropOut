@@ -1,0 +1,8 @@
+@keyframes load-view__show-wait-icon {
+  from { transform: translateX(-150px) scale(0.8); }
+  to   { transform: translateX(0px) scale(1.3); }
+}
+@keyframes load-view__scale-wait-icon {
+  from { transform: scale(5) rotate(0deg); }
+  to   { transform: scale(1) rotate(360deg); }
+}
