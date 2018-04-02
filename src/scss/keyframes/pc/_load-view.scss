@@ -100,8 +100,9 @@
 }
 
 @keyframes load-view__show-message {
-  from { transform: translateX(-100px); opacity: 0; }
-  to   { transform: translateX(0px); opacity: 1; }
+  0%   { transform: translateX(-200px); opacity: 0; }
+  8%   { transform: translateX(-80px); opacity: 1; }
+  100% { transform: translateX(0px); opacity: 1; }
 }
 
 @keyframes load-view__close-1 {

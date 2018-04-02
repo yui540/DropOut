@@ -488,10 +488,10 @@
         animation: load-view__show-curtain-2 0.5s ease 6s forwards;
         &::after { animation: load-view__show-curtain-inner-2 1.5s ease 6.2s forwards; }
       }
-      .message { animation: load-view__show-message 0.5s ease 6.7s forwards; }
+      .message { animation: load-view__show-message 5s ease-out 6.7s forwards; }
 
-      &::before { animation: load-view__close-1 0.5s ease 7.2s forwards; }
-      &::after  { animation: load-view__close-2 0.5s ease 7.2s forwards; }
+      &::before { animation: load-view__close-1 0.6s ease 7.2s forwards; }
+      &::after  { animation: load-view__close-2 0.6s ease 7.2s forwards; }
     }
 
     /*** info ***/
