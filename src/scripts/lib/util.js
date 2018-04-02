@@ -1,5 +1,7 @@
+const root = document.getElementById('root')
 const load_icon = document.querySelector('.load-view__body__panel__icon_type_4 .icon')
 const load_view = document.querySelector('.load-view')
+const load_view_body_close = document.querySelector('.load-view__body__close')
 
 /**
  * 画像のプリロード
@@ -58,5 +60,11 @@ export const startLoading = fn => {
  * ロードの終了
  */
 export const finLoad = () => {
-  load_view.setAttribute('data-state', 'start')  
+  load_view.setAttribute('data-state', 'start')
+
+  load_view_body_close.addEventListener('animationend', e => {
+    if(e.animationName === 'load-view__close-2') {
+      root.removeChild(load_view)
+    }
+  })
 }
