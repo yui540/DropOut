@@ -1,0 +1,638 @@
+@include sp-layout {
+  .load-view {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: $theme-pink;
+    overflow: hidden;
+  }
+
+  /**
+   * frame
+   */
+  .load-view__frame {
+    position: absolute;
+    top: 5px; left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+
+  /*** squares ***/
+  .load-view__frame__squares {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    div {
+      position: absolute;
+      width: 20px; height: 20px;
+      border: dashed 1px #fff;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    div:nth-child(1) { top: 0; left: 0; }
+    div:nth-child(2) { top: 0; right: 0; }
+    div:nth-child(3) { bottom: 0; left: 0; }
+    div:nth-child(4) { bottom: 0; right: 0; }
+  }
+
+  /*** lines ***/
+  .load-view__frame__lines {
+    position: absolute;
+    top: 19px; left: 19px;
+    width: calc(100% - 38px);
+    height: calc(100% - 38px);
+
+    div {
+      position: absolute;
+      box-sizing: border-box;
+    }
+    div:nth-child(1),
+    div:nth-child(3) {
+      left: 0; width: 100%; height: 3px;
+      border-top: dashed 1px #fff;
+    }
+    div:nth-child(2),
+    div:nth-child(4) {
+      top: 0; width: 1px; height: 100%;
+      border-left: dashed 1px #fff;
+    }
+    div:nth-child(1) { top: 0; }
+    div:nth-child(3) { bottom: 0; }
+    div:nth-child(2) { left: 0; }
+    div:nth-child(4) { right: 0; }
+  }
+
+  /**
+   * body
+   */
+  .load-view__body {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%; height: 100%;
+  }
+
+  /*** bg ***/
+  .load-view__body__bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    &::before,
+    &::after {
+      content: ""; display: block;
+      position: absolute;
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
+      border-radius: 3px;
+      background-color: rgba(255,255,255,0.2);
+    }
+    &::before { top: 35px; left: 35px; }
+    &::after  { bottom: 35px; right: 35px; }
+  }
+
+  /*** panel ***/
+  .load-view__body__panel {
+    position: absolute;
+    top: 0; left: calc(50% - 160px);
+    width: 320px; height: 100%;
+  }
+
+  /*** panel__icon ***/
+  .load-view__body__panel__icon {
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 40px; height: 40px;
+    opacity: 0;
+
+    .box {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 2px; left: 2px;
+        width: calc(100% - 4px); height: calc(100% - 4px);
+        box-sizing: border-box;
+        border: solid 1px transparent;
+      }
+
+      .frame {
+        position: absolute;
+        width: 40%; height: 40%;
+
+        &::before,
+        &::after { content: ""; display: block; position: absolute; }
+        &::before { width: 100%; height: 3px; }
+        &::after { width: 3px; height: 100%; }
+      }
+      .frame:nth-child(1) {
+        top: 0; right: 0;
+        &::before, &::after { top: 0; right: 0; }
+      }
+      .frame:nth-child(2) {
+        bottom: 0; left: 0;
+        &::before, &::after { bottom: 0; left: 0; }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 5px; left: 5px;
+      width: calc(100% - 10px); height: calc(100% - 10px);
+      background-size: 130%;
+      background-position: center;
+    }
+  }
+  .load-view__body__panel__icon_type_1 {
+    left: 32px;
+    .box {
+      &::after { border-color: $theme-pink; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-pink; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/1.png); }
+  }
+  .load-view__body__panel__icon_type_2 {
+    left: 104px;
+    .box {
+      &::after { border-color: $theme-light-purple; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-light-purple; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/2.png); }
+  }
+  .load-view__body__panel__icon_type_3 {
+    right: 104px;
+    .box {
+      &::after { border-color: $theme-light-pink; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-light-pink; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/3.png); }
+  }
+  .load-view__body__panel__icon_type_4 {
+    right: 32px;
+    .box {
+      &::after { border-color: $theme-purple; }
+      .frame {
+        &::before,
+        &::after { background-color: $theme-purple; }
+      }
+    }
+    .icon { background-image: url(../images/load-view/wait/4.png); }
+  }
+
+  /*** poster ***/
+  .load-view__body__poster {
+    position: absolute;
+    top: 0; left: calc(50% - 160px);
+    width: 320px; height: 100%;
+
+    .paint-ball-box {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+    }
+    .paint-ball {
+      position: absolute;
+      top: calc(50% - 15px); left: -30px;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+
+      div {
+        position: absolute;
+        top: 5px; left: 5px;
+        width: calc(100% - 10px); height: calc(100% - 10px);
+        border-radius: 50%;
+        border: dashed 1px $theme-pink;
+        box-sizing: border-box;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: ""; display: block;
+        width: calc(100% - 40px); height: 2px;
+        top: calc(50% - 1px); left: 20px;
+        background-color: $theme-pink;
+      }
+      &::before { transform: rotate(45deg); }
+      &::after  { transform: rotate(-45deg); }
+    }
+
+    .poster {
+      position: relative;
+      float: left;
+      width: 80px; height: 100%;
+      transform: translateY(calc(-100% + -100px));
+      perspective: 500px;
+    
+      .illust {
+        position: absolute;
+        top: calc(50% - 85.5px); left: 0;
+        width: 80px; height: 171px;
+        transform-origin: center bottom;
+        opacity: 0;
+        
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-size: 100% auto;
+          background-repeat: no-repeat;
+          background-position: center;
+          transform-origin: center bottom;
+        }
+      }
+
+      .ball {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        transform: translateY(calc(-50% + -25px));
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: calc(50% - 25px); left: calc(50% - 25px);
+          width: 50px; height: 50px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+
+      &::after {
+        content: ""; display: block; position: absolute;
+        left: -40px; bottom: -100px;
+        width: 0; height: 0;
+        border-top: solid 100px transparent;
+        border-right: solid 80px transparent;
+        border-left: solid 80px transparent;
+      }
+    }
+    .poster:nth-child(1) {
+      background-color: $theme-pink;
+      &::after { border-top-color: $theme-pink; }
+      .illust:after { background-image: url(../images/load-view/poster/1.png); }
+    }
+    .poster:nth-child(2) {
+      background-color: $theme-light-purple;
+      &::after { border-top-color: $theme-light-purple; }
+      .illust:after { background-image: url(../images/load-view/poster/2.png); }
+    }
+    .poster:nth-child(3) {
+      background-color: $theme-light-pink;
+      &::after { border-top-color: $theme-light-pink; }
+      .illust:after { background-image: url(../images/load-view/poster/3.png); }
+    }
+    .poster:nth-child(4) {
+      background-color: $theme-purple;
+      &::after { border-top-color: $theme-purple; }
+      .illust:after { background-image: url(../images/load-view/poster/4.png); }
+    }
+
+    .illust {
+      position: absolute;
+      top: calc(50% - 650px); left: 0;
+      width: 225px; height: 650px;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::after { content: ""; display: block; clear: both; }
+  }
+
+  .load-view__body__info {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .allow {
+      position: relative;
+      width: 100%; height: 25%;
+      transform: translateX(-100%);
+
+      .sd {
+        position: absolute;
+        top: calc(50% - 30px); height: 60px;
+        display: block;
+        opacity: 0;
+        transform-origin: center bottom;
+      }
+      .sd-1 { left: 5%; }
+      .sd-2 { right: 5%; }
+
+      .text {
+        position: absolute;
+        top: calc(50% - 30px);
+        height: 60px;
+        display: block;
+        opacity: 0;
+      }
+      .text-1 { right: 5%; }
+      .text-2 { left: 5%; }
+
+      .line {
+        position: absolute;
+        top: 20px; left: 0;
+        width: 100%; height: calc(100% - 40px);
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          bottom: 0; left: 0;
+          transform: translate(calc(100% - 15px), calc(100% - 5px));
+          width: calc(100% + 30px); height: 100%;
+          background-color: #fff;
+        }
+      }
+
+      .paint-ball {
+        position: absolute;
+        bottom: 20px; left: -30px;
+        width: 30px; height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        div {
+          position: absolute;
+          top: 5px; left: 5px;
+          width: calc(100% - 10px); height: calc(100% - 10px);
+          border-radius: 50%;
+          border: dashed 1px $theme-pink;
+          box-sizing: border-box;
+        }
+        &::before,
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          left: 10px; top: calc(50% - 1px);
+          width: calc(100% - 20px); height: 2px;
+          background-color: $theme-pink;
+        }
+        &::before { transform: rotate(45deg); }
+        &::after  { transform: rotate(-45deg); }
+      }
+    }
+    .allow:nth-child(1) {
+      background-color: $theme-pink;
+    }
+    .allow:nth-child(2) {
+      background-color: $theme-light-purple;
+    }
+    .allow:nth-child(3) {
+      background-color: $theme-light-pink;
+    }
+    .allow:nth-child(4) {
+      background-color: $theme-purple;
+    }
+  }
+
+  .load-view__body__close {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .curtain {
+      width: 100%; height: 50%;
+      background-color: #fff;
+      overflow: hidden;
+
+      &::after {
+        content: ""; display: block;
+        width: 100%; height: 100%;
+        background-color: $theme-pink;
+      }
+    }
+    .curtain:nth-child(1) { transform: translateY(-100%); }
+    .curtain:nth-child(2) { transform: translateY(100%); }
+
+    .message {
+      position: absolute;
+      top: calc(50% - 20px); left: 0;
+      width: 100%; height: 40px;
+      font-size: 14px;
+      color: #fff;
+      text-align: right;
+      line-height: 40px;
+      box-sizing: border-box;
+      padding: 0 20px;
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      content: ""; display: block;
+      position: absolute; left: 0;
+      width: 100%; height: 50%;
+      background-color: $theme-light-pink;
+      z-index: 1;
+    }
+    &::before { top: 0; transform: translateY(-100%); }
+    &::after  { bottom: 0; transform: translateY(100%); }
+  }
+
+  /********************************************************************************************
+   * animation
+   ********************************************************************************************/
+  /*** panel ***/
+  .load-view__body__panel__icon { .box { animation: rotate360 3s linear 0s infinite; } }
+  .load-view__body__panel__icon_type_1 {
+    animation:
+      fadein 0.8s ease 0s forwards,
+      load-view__show-wait-icon__sp 0.8s ease 0s forwards;
+    .icon { animation: load-view__scale-wait-icon__sp 1s ease 0s forwards; }
+  }
+  .load-view__body__panel__icon_type_2 {
+    animation:
+      fadein 0.8s ease 0.3s forwards,
+      load-view__show-wait-icon__sp 0.8s ease 0.3s forwards;
+    .icon { animation: load-view__scale-wait-icon__sp 1s ease 0.3s forwards; }
+  }
+  .load-view__body__panel__icon_type_3 {
+    animation:
+      fadein 0.8s ease 0.6s forwards,
+      load-view__show-wait-icon__sp 0.8s ease 0.6s forwards;
+    .icon { animation: load-view__scale-wait-icon__sp 1s ease 0.6s forwards; }
+  }
+  .load-view__body__panel__icon_type_4 {
+    animation:
+      fadein 0.8s ease 0.9s forwards,
+      load-view__show-wait-icon__sp 0.8s ease 0.9s forwards;
+    .icon { animation: load-view__scale-wait-icon__sp 1s ease 0.9s forwards; }
+  }
+
+  .load-view[data-state="start"] {
+    /*** close ***/
+    .load-view__body__close {
+      .curtain:nth-child(1) {
+        animation: load-view__show-curtain-1__sp 0.5s ease 6s forwards;
+        &::after { animation: load-view__show-curtain-inner-1__sp 1.5s ease 6.2s forwards; }
+      }
+      .curtain:nth-child(2) {
+        animation: load-view__show-curtain-2__sp 0.5s ease 6s forwards;
+        &::after { animation: load-view__show-curtain-inner-2__sp 1.5s ease 6.2s forwards; }
+      }
+      .message { animation: load-view__show-message__sp 5s ease-out 6.7s forwards; }
+
+      &::before { animation: load-view__close-1 0.6s ease 7.2s forwards; }
+      &::after  { animation: load-view__close-2 0.6s ease 7.2s forwards; }
+    }
+
+    /*** info ***/
+    .load-view__body__info {
+      .allow:nth-child(1) {
+        animation: slide-right 0.4s ease 3.5s forwards;
+        .sd {
+          animation:
+            fadein 0.1s ease 5.1s forwards,
+            load-view__sway-sd__sp 0.8s ease-in-out 5.1s alternate infinite;
+        }
+        .text {
+          animation:
+            fadein 0.1s ease 5.1s forwards,
+            load-view__sway-illust__sp 0.8s ease-in-out 5.1s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-1__sp 0.7s ease 4s forwards,
+            load-view__hidden-line-1__sp 0.8s ease 4.7s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-2__sp 0.7s ease 4s forwards; }
+      }
+      .allow:nth-child(2) {
+        animation: slide-right 0.4s ease 3.6s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.2s forwards,
+            load-view__sway-illust__sp 0.8s ease-in-out 5.2s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.2s forwards,
+            load-view__sway-sd__sp 0.8s ease-in-out 5.2s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-2__sp 0.7s ease 4.1s forwards,
+            load-view__hidden-line-2__sp 0.8s ease 4.8s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-1__sp 0.7s ease 4.1s forwards; }
+      }
+      .allow:nth-child(3) {
+        animation: slide-right 0.4s ease 3.7s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.3s forwards,
+            load-view__sway-illust__sp 0.8s ease-in-out 5.3s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.3s forwards,
+            load-view__sway-sd__sp 0.8s ease-in-out 5.3s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-1__sp 0.7s ease 4.2s forwards,
+            load-view__hidden-line-1__sp 0.8s ease 4.9s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-2__sp 0.7s ease 4.2s forwards; }
+      }
+      .allow:nth-child(4) {
+        animation: slide-right 0.4s ease 3.8s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.4s forwards,
+            load-view__sway-illust__sp 0.8s ease-in-out 5.4s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.4s forwards,
+            load-view__sway-sd__sp 0.8s ease-in-out 5.4s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-2__sp 0.7s ease 4.3s forwards,
+            load-view__hidden-line-2__sp 0.8s ease 5s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-1__sp 0.7s ease 4.3s forwards; }
+      }
+    }
+
+    /*** poster ***/
+    .load-view__body__poster {
+      .paint-ball { animation: load-view__move-paint-ball__sp 1s ease 2.6s forwards; }
+
+      .poster:nth-child(1) {
+        animation: load-view__show-poster__sp 0.5s ease 0s forwards;
+        .ball {
+          animation: load-view__fall-ball__sp 0.6s ease 0.6s forwards;
+          &::after { animation: load-view__scale-ball__sp 0.7s ease 1.2s forwards; }
+        }
+        .illust {
+          animation:
+            fadein 0.1s ease 1.45s forwards,
+            load-view__rotate-illust__sp 0.7s ease 2.6s forwards,
+            fadeout 0.35s ease 2.95s forwards;
+          &::after { animation: load-view__sway-illust__sp 0.8s ease-in-out 1.2s alternate infinite; }
+        }
+      }
+      .poster:nth-child(2) {
+        animation: load-view__show-poster__sp 0.5s ease 0.2s forwards;
+        .ball {
+          animation: load-view__fall-ball__sp 0.6s ease 0.8s forwards;
+          &::after { animation: load-view__scale-ball__sp 0.7s ease 1.4s forwards; }
+        }
+        .illust {
+          animation:
+            fadein 0.1s ease 1.65s forwards,
+            load-view__rotate-illust__sp 0.7s ease 2.8s forwards,
+            fadeout 0.35s ease 3.15s forwards;
+          &::after { animation: load-view__sway-illust__sp 0.8s ease-in-out 1.2s alternate infinite; }
+        }
+      }
+      .poster:nth-child(3) {
+        animation: load-view__show-poster__sp 0.5s ease 0.4s forwards;
+        .ball {
+          animation: load-view__fall-ball__sp 0.6s ease 1s forwards;
+          &::after { animation: load-view__scale-ball__sp 0.7s ease 1.6s forwards; }
+        }
+        .illust {
+          animation:
+            fadein 0.1s ease 1.85s forwards,
+            load-view__rotate-illust__sp 0.7s ease 3s forwards,
+            fadeout 0.35s ease 3.35s forwards;
+          &::after { animation: load-view__sway-illust__sp 0.8s ease-in-out 1.2s alternate infinite; }
+        }
+      }
+      .poster:nth-child(4) {
+        animation: load-view__show-poster__sp 0.5s ease 0.6s forwards;
+        .ball {
+          animation: load-view__fall-ball__sp 0.6s ease 1.2s forwards;
+          &::after { animation: load-view__scale-ball__sp 0.7s ease 1.8s forwards; }
+        }
+        .illust {
+          animation:
+            fadein 0.1s ease 2.1s forwards,
+            load-view__rotate-illust__sp 0.7s ease 3.2s forwards,
+            fadeout 0.35s ease 3.55s forwards;
+          &::after { animation: load-view__sway-illust__sp 0.8s ease-in-out 1.2s alternate infinite; }
+        }
+      }
+    }
+  }
+}
