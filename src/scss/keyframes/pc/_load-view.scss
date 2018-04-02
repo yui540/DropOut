@@ -6,3 +6,42 @@
   from { transform: scale(5) rotate(0deg); }
   to   { transform: scale(1) rotate(360deg); }
 }
+
+@keyframes load-view__show-poster {
+  from { transform: translateY(calc(-100% + -200px)); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes load-view__fall-ball {
+  0%   { transform: translateY(calc(-50% + -25px)); }
+  40%  { transform: translateY(calc(50% - 25px)); }
+  100% { transform: translateY(0); }
+}
+@keyframes load-view__scale-ball {
+  0% {
+    width: 50px; height: 50px; border-radius: 50%;
+    top: calc(50% - 25px); left: calc(50% - 25px);
+  }
+  50% {
+    width: calc(100% - 10px); height: 650px; border-radius: 0%;
+    top: calc(50% - 325px); left: 5px;
+  }
+  100% {
+    width: calc(100% - 10px); height: 0; border-radius: 0%;
+    top: calc(50% - 325px); left: 5px;
+  }
+}
+
+@keyframes load-view__sway-illust {
+  from { transform: rotate(-2deg); }
+  to   { transform: rotate(2deg); }
+}
+@keyframes load-view__rotate-illust {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(480deg); }
+}
+
+@keyframes load-view__move-paint-ball {
+  from { left: -60px; transform: rotate(0deg); }
+  to   { left: calc(100% + 60px); transform: rotate(1440deg); }
+}
