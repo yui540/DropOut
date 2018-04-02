@@ -45,3 +45,35 @@
   from { left: -60px; transform: rotate(0deg); }
   to   { left: calc(100% + 60px); transform: rotate(1440deg); }
 }
+@keyframes load-view__move-paint-ball-1 {
+  from { left: -60px; transform: rotate(0deg); }
+  to   { left: calc(100% + 60px); transform: rotate(5760deg); }
+}
+@keyframes load-view__move-paint-ball-2 {
+  from { left: calc(100% + 60px); transform: rotate(0deg); }
+  to   { left: -60px; transform: rotate(-5760deg); }
+}
+
+@keyframes load-view__show-line-1 {
+  from { transform: translate(calc(100% + 15px), calc(100% - 5px)); }
+  to   { transform: translate(-15px, calc(100% - 5px)); }
+}
+@keyframes load-view__show-line-2 {
+  from { transform: translate(calc(-100% + -15px), calc(100% - 5px)); }
+  to   { transform: translate(-15px, calc(100% - 5px)); }
+}
+@keyframes load-view__hidden-line-1 {
+  0%   { transform: translate(-15px, calc(100% - 5px)); }
+  50%  { transform: translate(-15px, 0); }
+  100% { transform: translate(calc(100% + 15px), 0); }
+}
+@keyframes load-view__hidden-line-2 {
+  0%   { transform: translate(-15px, calc(100% - 5px)); }
+  50%  { transform: translate(-15px, 0); }
+  100% { transform: translate(calc(-100% + -15px), 0); }
+}
+
+@keyframes load-view__sway-sd {
+  from { transform: rotate(-5deg); }
+  to   { transform: rotate(5deg); }
+}

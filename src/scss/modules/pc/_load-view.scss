@@ -311,6 +311,93 @@
     &::after { content: ""; display: block; clear: both; }
   }
 
+  .load-view__body__info {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .allow {
+      position: relative;
+      width: 100%; height: 25%;
+      transform: translateX(-100%);
+
+      .sd {
+        position: absolute;
+        top: 20px; height: calc(100% - 40px);
+        display: block;
+        opacity: 0;
+        transform-origin: center bottom;
+      }
+      .sd-1 { left: 10%; }
+      .sd-2 { right: 10%; }
+
+      .text {
+        position: absolute;
+        top: 30px;
+        height: calc(100% - 60px);
+        display: block;
+        opacity: 0;
+      }
+      .text-1 { right: 10%; }
+      .text-2 { left: 10%; }
+
+      .line {
+        position: absolute;
+        top: 20px; left: 0;
+        width: 100%; height: calc(100% - 40px);
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          bottom: 0; left: 0;
+          transform: translate(calc(100% - 15px), calc(100% - 5px));
+          width: calc(100% + 30px); height: 100%;
+          background-color: #fff;
+        }
+      }
+
+      .paint-ball {
+        position: absolute;
+        bottom: 20px; left: -60px;
+        width: 60px; height: 60px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        div {
+          position: absolute;
+          top: 5px; left: 5px;
+          width: calc(100% - 10px); height: calc(100% - 10px);
+          border-radius: 50%;
+          border: dashed 2px $theme-pink;
+          box-sizing: border-box;
+        }
+        &::before,
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          left: 20px; top: calc(50% - 1px);
+          width: calc(100% - 40px); height: 2px;
+          background-color: $theme-pink;
+        }
+        &::before { transform: rotate(45deg); }
+        &::after  { transform: rotate(-45deg); }
+      }
+    }
+    .allow:nth-child(1) {
+      background-color: $theme-pink;
+    }
+    .allow:nth-child(2) {
+      background-color: $theme-light-purple;
+    }
+    .allow:nth-child(3) {
+      background-color: $theme-light-pink;
+    }
+    .allow:nth-child(4) {
+      background-color: $theme-purple;
+    }
+  }
+
   /********************************************************************************************
    * animation
    ********************************************************************************************/
@@ -342,6 +429,86 @@
   }
 
   .load-view[data-state="start"] {
+    /*** info ***/
+    .load-view__body__info {
+      .allow:nth-child(1) {
+        animation: slide-right 0.4s ease 3.5s forwards;
+        .sd {
+          animation:
+            fadein 0.1s ease 5.1s forwards,
+            load-view__sway-sd 0.8s ease-in-out 5.1s alternate infinite;
+        }
+        .text {
+          animation:
+            fadein 0.1s ease 5.1s forwards,
+            load-view__sway-illust 0.8s ease-in-out 5.1s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-1 0.7s ease 4s forwards,
+            load-view__hidden-line-1 0.8s ease 4.7s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-2 0.7s ease 4s forwards; }
+      }
+      .allow:nth-child(2) {
+        animation: slide-right 0.4s ease 3.6s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.2s forwards,
+            load-view__sway-illust 0.8s ease-in-out 5.2s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.2s forwards,
+            load-view__sway-sd 0.8s ease-in-out 5.2s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-2 0.7s ease 4.1s forwards,
+            load-view__hidden-line-2 0.8s ease 4.8s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-1 0.7s ease 4.1s forwards; }
+      }
+      .allow:nth-child(3) {
+        animation: slide-right 0.4s ease 3.7s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.3s forwards,
+            load-view__sway-illust 0.8s ease-in-out 5.3s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.3s forwards,
+            load-view__sway-sd 0.8s ease-in-out 5.3s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-1 0.7s ease 4.2s forwards,
+            load-view__hidden-line-1 0.8s ease 4.9s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-2 0.7s ease 4.2s forwards; }
+      }
+      .allow:nth-child(4) {
+        animation: slide-right 0.4s ease 3.8s forwards;
+        .text {
+          animation:
+            fadein 0.1s ease 5.4s forwards,
+            load-view__sway-illust 0.8s ease-in-out 5.4s alternate infinite;
+        }
+        .sd {
+          animation:
+            fadein 0.1s ease 5.4s forwards,
+            load-view__sway-sd 0.8s ease-in-out 5.4s alternate infinite;
+        }
+        .line::after {
+          animation:
+            load-view__show-line-2 0.7s ease 4.3s forwards,
+            load-view__hidden-line-2 0.8s ease 5s forwards;
+        }
+        .paint-ball { animation: load-view__move-paint-ball-1 0.7s ease 4.3s forwards; }
+      }
+    }
+
     /*** poster ***/
     .load-view__body__poster {
       .paint-ball { animation: load-view__move-paint-ball 1s ease 2.6s forwards; }
