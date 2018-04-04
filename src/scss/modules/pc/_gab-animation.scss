@@ -5,6 +5,7 @@
     width: 100%; height: 100%;
     min-width: $min-width; min-height: $min-height;
     background-color: $theme-light-pink;
+    overflow: hidden;
     z-index: 1001;
   }
 
@@ -21,6 +22,47 @@
     }
   }
 
+  /*** frame ***/
+  .gab-animation__frame {
+    position: absolute;
+    top: -100px; left: calc(50% - 50px);
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .area {
+      position: relative;
+      float: left;
+      width: 50%; height: 100%;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+      &::before { background-color: $theme-light-pink; }
+      &::after  { background-color: $theme-purple; }
+    }
+    .area:nth-child(1) {
+      &::after { transform: translate(calc(-100% + 5px), -100%); }
+    }
+    .area:nth-child(2) {
+      &::after { transform: translate(calc(100% - 5px), 100%); }
+    }
+
+    &::after {
+      content: ""; display: block;
+      position: absolute;
+      width: 100%; height: 100%;
+      background-image: url(../images/gab-animation/bg.png);
+      background-size: 30px;
+      opacity: 0;
+    }
+  }
+
   /*************************************************************************************************
    * animation
    *************************************************************************************************/
@@ -34,6 +76,43 @@
       div:nth-child(6) { animation: slide-right 0.4s ease 0.5s forwards; }
       div:nth-child(7) { animation: slide-right 0.4s ease 0.6s forwards; }
       div:nth-child(8) { animation: slide-right 0.4s ease 0.7s forwards; }
+    }
+
+    .gab-animation__frame {
+      animation:
+        gab-animation__fall-frame 0.5s ease-out 1.1s forwards,
+        gab-animation__scale-frame 0.7s ease-in-out 1.6s forwards,
+        gab-animation__open-frame 0.4s ease-in-out 2.3s forwards,
+        gab-animation__radius-frame 1s ease-in-out 3.8s forwards;
+
+      &::after { animation: gab-animation__show-bg 0.4s ease 3.8s forwards; }
+
+      .area:nth-child(1) {
+        &::before {
+          animation:
+            gab-animation__move-y1-area-1 0.3s ease 2.7s forwards,
+            gab-animation__move-x-area-1 0.4s ease 3s forwards,
+            gab-animation__move-y2-area-1 0.3s ease 3.4s forwards;
+        }
+        &::after {
+          animation:
+            gab-animation__move-y-area-bg-1 0.3s ease 3.5s forwards,
+            gab-animation__move-x-area-bg-1 0.4s ease 3.8s forwards;
+        }
+      }
+      .area:nth-child(2) {
+        &::before {
+          animation:
+            gab-animation__move-y1-area-2 0.3s ease 2.7s forwards,
+            gab-animation__move-x-area-2 0.4s ease 3s forwards,
+            gab-animation__move-y2-area-2 0.3s ease 3.4s forwards;
+        }
+        &::after {
+          animation:
+            gab-animation__move-y-area-bg-2 0.3s ease 3.5s forwards,
+            gab-animation__move-x-area-bg-2 0.4s ease 3.8s forwards;
+        }
+      }
     }
   }
 }

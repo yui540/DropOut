@@ -1,0 +1,78 @@
+@keyframes gab-animation__fall-frame {
+  0% { top: -100px; }
+  50% { top: calc(50% + 180px); transform: scale(1); }
+  60% { top: calc(50% + 180px); transform: scale(1.4, 0.8); }
+  70% { transform: scale(1); }
+  100% { top: calc(50% - 50px); }
+}
+@keyframes gab-animation__scale-frame {
+  0% { transform: scale(1); opacity: 1; }
+  25% { transform: scale(3,2); opacity: 0.5; }
+  50% { transform: scale(1); opacity: 1; }
+  75% { transform: scale(2,3); opacity: 0.5; }
+  100% { transform: scale(1); opacity:1; }
+}
+@keyframes gab-animation__open-frame {
+  from {
+    top: calc(50% - 50px); left: calc(50% - 50px);
+    width: 100px; height: 100px;
+    border-radius: 50%;
+  }
+  to {
+    top: 40px; left: 40px;
+    width: calc(100% - 80px); height: calc(100% - 80px);
+    border-radius: 0%;
+  }
+}
+
+@keyframes gab-animation__move-y1-area-1 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(0, -50px); }
+}
+@keyframes gab-animation__move-y2-area-1 {
+  from { transform: translate(calc(-100% + 5px), -50px); }
+  to   { transform: translate(calc(-100% + 5px), 100%); }
+}
+@keyframes gab-animation__move-y1-area-2 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(0, 50px); }
+}
+@keyframes gab-animation__move-y2-area-2 {
+  from { transform: translate(calc(100% - 5px), 50px); }
+  to   { transform: translate(calc(100% - 5px), -100%); }
+}
+@keyframes gab-animation__move-x-area-1 {
+  from { transform: translate(0, -50px); }
+  to   { transform: translate(calc(-100% + 5px), -50px); }
+}
+@keyframes gab-animation__move-x-area-2 {
+  from { transform: translate(0, 50px); }
+  to   { transform: translate(calc(100% - 5px), 50px); }
+}
+
+@keyframes gab-animation__move-y-area-bg-1 {
+  from { transform: translate(calc(-100% + 5px), -100%); }
+  to   { transform: translate(calc(-100% + 5px), 0%); }
+}
+@keyframes gab-animation__move-y-area-bg-2 {
+  from { transform: translate(calc(100% - 5px), 100%); }
+  to   { transform: translate(calc(100% - 5px), 0%); }
+}
+@keyframes gab-animation__move-x-area-bg-1 {
+  from { transform: translate(calc(-100% + 5px), 0%); }
+  to   { transform: translate(0, 0%); }
+}
+@keyframes gab-animation__move-x-area-bg-2 {
+  from { transform: translate(calc(100% - 5px), 0%); }
+  to   { transform: translate(0, 0%); }
+}
+
+@keyframes gab-animation__radius-frame {
+  from { border-radius: 0; }
+  to   { border-radius: 8px; }
+}
+
+@keyframes gab-animation__show-bg {
+  from { opacity: 0; }
+  to   { opacity: 0.2; }
+}
