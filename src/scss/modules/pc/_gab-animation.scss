@@ -165,6 +165,71 @@
     }
   }
 
+  .gab-animation__back-overray {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    section {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        float: left;
+        content: ""; display: block;
+        width: 50%; height: 100%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          width: 100%; height: 100%;
+        }
+      }
+      div:nth-child(1):after { transform: translateX(100%); }
+      div:nth-child(2):after { transform: translateX(-100%); }
+    }
+    section:nth-child(1) { div:after { background-color: $theme-pink; } }
+    section:nth-child(2) { div:after { background-color: $theme-light-pink; } }
+    section:nth-child(3) { div:after { background-color: $theme-bg; } }
+  }
+
+  .gab-animation__message {
+    position: absolute;
+    top: calc(50% - 148.5px); left: calc(50% - 400px);
+    width: 800px; height: 297px;
+    background-image: url(../images/gab-animation/message.png);
+    background-size: 100%;
+    opacity: 0;
+  }
+  
+  .gab-animation__front-overray {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    section {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        float: left;
+        content: ""; display: block;
+        width: 50%; height: 100%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          width: 100%; height: 100%;
+          background-color: $theme-purple;
+        }
+      }
+      div:nth-child(1):after { transform: translateX(100%); }
+      div:nth-child(2):after { transform: translateX(-100%); }
+    }
+  }
+
   /*************************************************************************************************
    * animation
    *************************************************************************************************/
@@ -299,6 +364,30 @@
       .gauge {
         animation: slide-right 0.35s ease 5.5s forwards;
         &::after { animation: slide-right 1s ease 5.7s reverse forwards; }
+      }
+    }
+
+    .gab-animation__back-overray {
+      section:nth-child(1) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.3s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.3s forwards; }
+      }
+      section:nth-child(2) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.4s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.4s forwards; }
+      }
+      section:nth-child(3) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.5s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.5s forwards; }
+      }
+    }
+
+    .gab-animation__message { animation: gab-animation__message 0.4s ease 6.9s forwards; }
+
+    .gab-animation__front-overray {
+      section {
+        div:nth-child(1):after { animation: slide-left 0.7s ease 7.8s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.7s ease 7.8s forwards; }
       }
     }
   }
