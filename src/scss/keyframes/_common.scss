@@ -18,3 +18,7 @@
   from { transform: translateX(100%); }
   to   { transform: translateX(0%); }
 }
+@keyframes scale10 {
+  from { transform: scale(1); }
+  to   { transform: scale(10); }
+}

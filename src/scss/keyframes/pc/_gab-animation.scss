@@ -76,3 +76,46 @@
   from { opacity: 0; }
   to   { opacity: 0.2; }
 }
+
+@keyframes gab-animation__x-paint-ball-1 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(100% + 50px)); }
+}
+@keyframes gab-animation__y-paint-ball-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-300px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes gab-animation__x-paint-ball-2 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% + -50px)); }
+}
+@keyframes gab-animation__y-paint-ball-2 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-300px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gab-animation__rotate-illust {
+  0%   { transform: rotateY(90deg); }
+  50%  { transform: rotateY(-2deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+@keyframes gab-animation__fall-ball-effect {
+  from { top: -60px; }
+  to   { top: calc(100% - 250px); }
+}
+@keyframes gab-animation__scale-ball-effect {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(4); opacity: 0; }
+}
+
+@keyframes gab-animation__attack-gab {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(8px); opacity: 0.8; }
+}
+@keyframes gab-animation__down-gab {
+  from { transform-origin: center bottom; transform: rotateX(0deg); opacity: 1; }
+  to   { transform-origin: center bottom; transform: rotateX(90deg); opacity: 0; }
+}
