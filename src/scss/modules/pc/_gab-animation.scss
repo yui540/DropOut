@@ -230,6 +230,83 @@
     }
   }
 
+  .gab-animation__palette {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
+    .paint {
+      position: absolute; top: -100px;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background-color: $theme-bg;
+
+      div {
+        position: absolute;
+        top: 50%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-color: $theme-bg;
+          transform: translateY(-100%);
+        }
+      }
+      div:nth-child(1) {
+        left: calc(50% - 5px);
+        width: 10px; height: 120px;
+        &::after { border-radius: 10px; }
+      }
+      div:nth-child(2) {
+        left: 2px;
+        width: 18px; height: 70px;
+        &::after { border-radius: 15px; }
+      }
+      div:nth-child(3) {
+        right: 20px;
+        width: 15px; height: 75px;
+        &::after { border-radius: 10px; }
+      }
+      div:nth-child(4) {
+        right: 0px;
+        width: 10px; height: 50px;
+        &::after { border-radius: 10px; }
+      }
+
+      .char {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-color: $theme-bg;
+        }
+      }
+      .char-1 { background-image: url(../images/gab-animation/name/1.png); }
+      .char-2 { background-image: url(../images/gab-animation/name/2.png); }
+      .char-3 { background-image: url(../images/gab-animation/name/3.png); }
+      .char-4 { background-image: url(../images/gab-animation/name/4.png); }
+      .char-5 { background-image: url(../images/gab-animation/name/5.png); }
+    }
+    .paint:nth-child(1) { left: calc(50% - 330px); }
+    .paint:nth-child(2) { left: calc(50% - 190px); }
+    .paint:nth-child(3) { left: calc(50% - 50px); }
+    .paint:nth-child(4) { left: calc(50% + 90px); }
+    .paint:nth-child(5) { left: calc(50% + 230px); }
+  }
+
   /*************************************************************************************************
    * animation
    *************************************************************************************************/
@@ -388,6 +465,49 @@
       section {
         div:nth-child(1):after { animation: slide-left 0.7s ease 7.8s forwards; }
         div:nth-child(2):after { animation: slide-right 0.7s ease 7.8s forwards; }
+      }
+    }
+
+    .gab-animation__palette {
+      .paint:nth-child(1) {
+        animation: gab-animation__fall-paint-1 0.2s ease 9s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 9.2s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 9.2s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.2s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 9.2s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 9.2s reverse forwards; }
+      }
+      .paint:nth-child(2) {
+        animation: gab-animation__fall-paint-2 0.2s ease 10s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 10.2s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 10.2s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.2s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 10.2s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 10.2s reverse forwards; }
+      }
+      .paint:nth-child(3) {
+        animation: gab-animation__fall-paint-1 0.2s ease 8.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 8.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 8.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 8.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 8.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 8.7s reverse forwards; }
+      }
+      .paint:nth-child(4) {
+        animation: gab-animation__fall-paint-2 0.2s ease 10.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 10.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 10.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 10.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 10.7s reverse forwards; }
+      }
+      .paint:nth-child(5) {
+        animation: gab-animation__fall-paint-1 0.2s ease 9.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 9.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 9.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 9.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 9.7s reverse forwards; }
       }
     }
   }

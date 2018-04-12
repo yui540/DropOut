@@ -124,3 +124,14 @@
   from { transform: scale(3) rotate(35deg); opacity: 0; }
   to   { transform: scale(0.7) rotate(-8deg); opacity: 1; }
 }
+
+@keyframes gab-animation__fall-paint-1 {
+  0%   { top: -100px; transform: scaleX(1); }
+  60%  { transform: scaleX(1); }
+  100% { top: calc(50% - 70px); transform: scaleX(1.2); }
+}
+@keyframes gab-animation__fall-paint-2 {
+  0%   { top: -100px; transform: scaleX(1); }
+  60%  { transform: scaleX(1); }
+  100% { top: calc(50% - 30px); transform: scaleX(1.2); }
+}

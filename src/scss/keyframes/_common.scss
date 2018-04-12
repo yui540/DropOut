@@ -18,6 +18,14 @@
   from { transform: translateX(100%); }
   to   { transform: translateX(0%); }
 }
+@keyframes slide-top {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0%); }
+}
+@keyframes slide-bottom {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0%); }
+}
 @keyframes scale10 {
   from { transform: scale(1); }
   to   { transform: scale(10); }
