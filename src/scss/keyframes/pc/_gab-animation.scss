@@ -135,3 +135,25 @@
   60%  { transform: scaleX(1); }
   100% { top: calc(50% - 30px); transform: scaleX(1.2); }
 }
+
+@keyframes gab-animation__show-clock-frame {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+@keyframes gab-animation__show-clock-hand {
+  from { height: 0; top: 50%; }
+  to   { height: 100%; top: 0%; }
+}
+
+@keyframes gab-animation__reverse-clock-hand {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-30deg); }
+}
+@keyframes gab-animation__rotate-clock-hand {
+  from { transform: rotate(-30deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes gab-animation__scale-clock-hand {
+  from { width: 10px; left: calc(50% - 5px); }
+  to   { width: 100%; left: 0; }
+}
