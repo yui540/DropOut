@@ -26,7 +26,15 @@
   from { transform: translateY(-100%); }
   to   { transform: translateY(0%); }
 }
+@keyframes scale0-1 {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
 @keyframes scale10 {
   from { transform: scale(1); }
   to   { transform: scale(10); }
+}
+@keyframes scale1dot5 {
+  from { transform: scale(1); }
+  to   { transform: scale(1.5); }
 }

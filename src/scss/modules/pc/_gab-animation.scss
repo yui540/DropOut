@@ -430,6 +430,104 @@
     }
   }
 
+  .gab-animation__close {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 6;
+
+    .effect {
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      transform: scale(1.5);
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        &:after {
+          content: ""; display: block;
+          position: absolute;
+          top: 5px; left: calc(50% - 10px);
+          width: 0; height: 0;
+          border: solid 10px transparent;
+          border-top: solid 35px $theme-purple;
+          opacity: 0;
+        }
+      }
+      div:nth-child(1) { transform: rotate(0deg); }
+      div:nth-child(2) { transform: rotate(30deg); }
+      div:nth-child(3) { transform: rotate(60deg); }
+      div:nth-child(4) { transform: rotate(90deg); }
+      div:nth-child(5) { transform: rotate(120deg); }
+      div:nth-child(6) { transform: rotate(150deg); }
+      div:nth-child(7) { transform: rotate(180deg); }
+      div:nth-child(8) { transform: rotate(210deg); }
+      div:nth-child(9) { transform: rotate(240deg); }
+      div:nth-child(10) { transform: rotate(270deg); }
+      div:nth-child(11) { transform: rotate(300deg); }
+      div:nth-child(12) { transform: rotate(330deg); }
+    }
+    .effect-1 { top: calc(50% - 100px); left: calc(50% - 100px); }
+    .effect-2 { top: 20px; right: 20px; }
+    .effect-3 { bottom: 20px; left: 20px; }
+
+    .ball {
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background-color: $theme-purple;
+      transform: scale(0);
+
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 20%; left: 20%;
+        width: 60%; height: 60%;
+        border-radius: 50%;
+        background-color: $theme-light-purple;
+      }
+    }
+    .ball-1 { top: calc(20px - 312px); right: calc(20px - 312px); }
+    .ball-2 { top: calc(50% - 312px); left: calc(50% - 312px); }
+    .ball-3 { bottom: calc(20px - 312px); left: calc(20px - 312px); }
+
+    .end-block {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      .paint-ball {
+        position: absolute;
+        top: calc(50% - 20px); left: calc(50% - 20px);
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background-color: $theme-purple;
+        transform: scale(0);
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: ""; display: block;
+      }
+      &::before {
+        left: calc(50% - 1px); top: 50%;
+        width: 2px; height: 0;
+        background-color: $theme-purple;
+      }
+      &::after {
+        width: 400px; height: 400px;
+        border-radius: 50%;
+        background-color: $theme-purple;
+        top: calc(50% - 200px); left: calc(50% - 200px);
+        transform: scale(0);
+      }
+    }
+  }
+
   /*************************************************************************************************
    * animation
    *************************************************************************************************/
@@ -670,10 +768,84 @@
     }
 
     .gab-animation__camera {
-      animation: gab-animation__camera 2.8s ease-in-out 15.2s forwards;
+      animation:
+        gab-animation__camera 2.8s ease-in-out 15.2s forwards,
+        fadeout 0.1s ease 19s forwards;
       .layer-2:before { animation: slide-bottom 0.6s ease 16.2s forwards; }
       .layer-3:before { animation: slide-top 0.6s ease 16.6s forwards; }
       .layer-4:before { animation: gab-animation__show-layer 0.8s ease 17.1s forwards; }
+    }
+
+    .gab-animation__close {
+      .effect-1 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease-out 18.3s reverse forwards,
+            fadein 0.1s ease 18.3s forwards,
+            fadeout 0.1s ease 18.8s forwards,
+            gab-animation__effect 0.6s ease-out 19.7s forwards,
+            fadein 0.1s ease 19.7s forwards,
+            fadeout 0.1s ease 20.2s forwards;
+        }
+      }
+      .effect-2 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease-out 17.7s reverse forwards,
+            fadein 0.1s ease 17.7s forwards,
+            fadeout 0.1s ease 18.2s forwards,
+            gab-animation__effect 0.6s ease-out 19.1s forwards,
+            fadein 0.1s ease 19.1s forwards,
+            fadeout 0.1s ease 19.6s forwards;
+        }
+      }
+      .effect-3 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease 18s reverse forwards,
+            fadein 0.1s ease 18s forwards,
+            fadeout 0.1s ease 18.5s forwards,
+            gab-animation__effect 0.6s ease 19.4s forwards,
+            fadein 0.1s ease 19.4s forwards,
+            fadeout 0.1s ease 19.9s forwards;
+        }
+      }
+      .ball-1 {
+        animation: gab-animation__scale-ball 0.5s ease 18.2s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.3s alternate 2 forwards; }
+      }
+      .ball-2 {
+        animation: gab-animation__scale-ball 0.5s ease 18.8s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.9s alternate 2 forwards; }
+      }
+      .ball-3 {
+        animation: gab-animation__scale-ball 0.5s ease 18.5s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.6s alternate 2 forwards; }
+      }
+
+      .end-block {
+        .paint-ball:nth-child(1) {
+          animation:
+            scale0-1 0.4s ease 20s forwards,
+            gab-animation__move-end-block-1 0.4s ease 20.4s forwards;
+        }
+        .paint-ball:nth-child(2) {
+          animation:
+            scale0-1 0.4s ease 20s forwards,
+            gab-animation__move-end-block-2 0.4s ease 20.4s forwards;
+        }
+        &::before {
+          animation:
+            gab-animation__show-end-block 0.4s ease 20.4s forwards,
+            rotate360 0.6s ease-in-out 20.8s forwards;
+        }
+        &::after {
+          animation:
+            scale0-1 0.6s ease-out 20.8s forwards,
+            scale1dot5 0.3s ease 21.4s 2 alternate forwards,
+            gab-animation__close 0.5s ease 22s forwards;
+        }
+      }
     }
   }
 }
