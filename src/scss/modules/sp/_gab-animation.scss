@@ -1,4 +1,4 @@
-@include tablet-layout {
+@include sp-layout {
   .gab-animation {
     position: absolute;
     top: 0; left: 0;
@@ -195,8 +195,8 @@
 
   .gab-animation__message {
     position: absolute;
-    top: calc(50% - 148.5px); left: calc(50% - 400px);
-    width: 800px; height: 297px;
+    top: calc(50% - 74.5px); left: calc(50% - 200px);
+    width: 400px; height: 149px;
     background-image: url(../images/gab-animation/message.png);
     background-size: 100%;
     opacity: 0;
@@ -234,11 +234,19 @@
     top: 0; left: 0;
     width: 100%; height: 100%;
     
+    .paint-box {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      transform: scale(0.5);
+    }
+
     .paint {
       position: absolute; top: -100px;
       width: 100px; height: 100px;
       border-radius: 50%;
       background-color: $theme-bg;
+      opacity: 0;
 
       div {
         position: absolute;
@@ -437,7 +445,7 @@
 
     .effect {
       position: absolute;
-      width: 200px; height: 200px;
+      width: 100px; height: 100px;
       border-radius: 50%;
       transform: scale(1.5);
       overflow: hidden;
@@ -449,10 +457,10 @@
         &:after {
           content: ""; display: block;
           position: absolute;
-          top: 5px; left: calc(50% - 10px);
+          top: 5px; left: calc(50% - 8.75px);
           width: 0; height: 0;
-          border: solid 10px transparent;
-          border-top: solid 35px $theme-purple;
+          border: solid 5px transparent;
+          border-top: solid 17.5px $theme-purple;
           opacity: 0;
         }
       }
@@ -469,13 +477,13 @@
       div:nth-child(11) { transform: rotate(300deg); }
       div:nth-child(12) { transform: rotate(330deg); }
     }
-    .effect-1 { top: calc(50% - 100px); left: calc(50% - 100px); }
+    .effect-1 { top: calc(50% - 50px); left: calc(50% - 50px); }
     .effect-2 { top: 20px; right: 20px; }
     .effect-3 { bottom: 20px; left: 20px; }
 
     .ball {
       position: absolute;
-      width: 600px; height: 600px;
+      width: 250px; height: 250px;
       border-radius: 50%;
       background-color: $theme-purple;
       transform: scale(0);
@@ -489,9 +497,9 @@
         background-color: $theme-light-purple;
       }
     }
-    .ball-1 { top: calc(20px - 312px); right: calc(20px - 312px); }
-    .ball-2 { top: calc(50% - 312px); left: calc(50% - 312px); }
-    .ball-3 { bottom: calc(20px - 312px); left: calc(20px - 312px); }
+    .ball-1 { top: calc(20px - 125px); right: calc(20px - 125px); }
+    .ball-2 { top: calc(50% - 125px); left: calc(50% - 125px); }
+    .ball-3 { bottom: calc(20px - 125px); left: calc(20px - 125px); }
 
     .end-block {
       position: absolute;
@@ -518,10 +526,10 @@
         background-color: $theme-purple;
       }
       &::after {
-        width: 400px; height: 400px;
+        width: 200px; height: 200px;
         border-radius: 50%;
         background-color: $theme-purple;
-        top: calc(50% - 200px); left: calc(50% - 200px);
+        top: calc(50% - 100px); left: calc(50% - 100px);
         transform: scale(0);
       }
     }
@@ -690,7 +698,9 @@
 
     .gab-animation__palette {
       .paint:nth-child(1) {
-        animation: gab-animation__fall-paint-1 0.2s ease 9s forwards;
+        animation:
+          fadein 0.1s ease 9s forwards,
+          gab-animation__fall-paint-1 0.2s ease 9s forwards;
         div:nth-child(1):after { animation: slide-bottom 2s ease 9.2s forwards; }
         div:nth-child(2):after { animation: slide-bottom 1s ease 9.2s forwards; }
         div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.2s forwards; }
@@ -698,7 +708,9 @@
         .char:after { animation: slide-top 1.8s ease-out 9.2s reverse forwards; }
       }
       .paint:nth-child(2) {
-        animation: gab-animation__fall-paint-2 0.2s ease 10s forwards;
+        animation:
+          fadein 0.1s ease 10s forwards,
+          gab-animation__fall-paint-2 0.2s ease 10s forwards;
         div:nth-child(1):after { animation: slide-bottom 2s ease 10.2s forwards; }
         div:nth-child(2):after { animation: slide-bottom 1s ease 10.2s forwards; }
         div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.2s forwards; }
@@ -706,7 +718,9 @@
         .char:after { animation: slide-top 1.8s ease-out 10.2s reverse forwards; }
       }
       .paint:nth-child(3) {
-        animation: gab-animation__fall-paint-1 0.2s ease 8.5s forwards;
+        animation:
+          fadein 0.1s ease 8.5s forwards,
+          gab-animation__fall-paint-1 0.2s ease 8.5s forwards;
         div:nth-child(1):after { animation: slide-bottom 2s ease 8.7s forwards; }
         div:nth-child(2):after { animation: slide-bottom 1s ease 8.7s forwards; }
         div:nth-child(3):after { animation: slide-bottom 1.8s ease 8.7s forwards; }
@@ -714,7 +728,9 @@
         .char:after { animation: slide-top 1.8s ease-out 8.7s reverse forwards; }
       }
       .paint:nth-child(4) {
-        animation: gab-animation__fall-paint-2 0.2s ease 10.5s forwards;
+        animation:
+          fadein 0.1s ease 10.5s forwards,
+          gab-animation__fall-paint-2 0.2s ease 10.5s forwards;
         div:nth-child(1):after { animation: slide-bottom 2s ease 10.7s forwards; }
         div:nth-child(2):after { animation: slide-bottom 1s ease 10.7s forwards; }
         div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.7s forwards; }
@@ -722,7 +738,9 @@
         .char:after { animation: slide-top 1.8s ease-out 10.7s reverse forwards; }
       }
       .paint:nth-child(5) {
-        animation: gab-animation__fall-paint-1 0.2s ease 9.5s forwards;
+        animation:
+          fadein 0.1s ease 9.5s forwards,
+          gab-animation__fall-paint-1 0.2s ease 9.5s forwards;
         div:nth-child(1):after { animation: slide-bottom 2s ease 9.7s forwards; }
         div:nth-child(2):after { animation: slide-bottom 1s ease 9.7s forwards; }
         div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.7s forwards; }
@@ -826,23 +844,23 @@
         .paint-ball:nth-child(1) {
           animation:
             scale0-1 0.4s ease 20s forwards,
-            gab-animation__move-end-block-1 0.4s ease 20.4s forwards;
+            gab-animation__move-end-block-1__sp 0.4s ease 20.4s forwards;
         }
         .paint-ball:nth-child(2) {
           animation:
             scale0-1 0.4s ease 20s forwards,
-            gab-animation__move-end-block-2 0.4s ease 20.4s forwards;
+            gab-animation__move-end-block-2__sp 0.4s ease 20.4s forwards;
         }
         &::before {
           animation:
-            gab-animation__show-end-block 0.4s ease 20.4s forwards,
+            gab-animation__show-end-block__sp 0.4s ease 20.4s forwards,
             rotate360 0.6s ease-in-out 20.8s forwards;
         }
         &::after {
           animation:
             scale0-1 0.6s ease-out 20.8s forwards,
             scale1dot5 0.3s ease 21.4s 2 alternate forwards,
-            gab-animation__close 0.5s ease 22s forwards;
+            gab-animation__close__sp 0.5s ease 22s forwards;
         }
       }
     }
