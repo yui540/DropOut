@@ -79,7 +79,8 @@ export const startGabAnimation = () => {
   gab_animation.setAttribute('data-state', 'start')
 
   gab_animation__end_block.addEventListener('animationend', e => {
-    if(e.animationName === 'gab-animation__close') {
+    if(e.animationName === 'gab-animation__close'
+      || e.animationName === 'gab-animation__close__sp') {
       root.removeChild(gab_animation)
     }
   })
