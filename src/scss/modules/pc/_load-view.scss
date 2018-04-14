@@ -6,6 +6,7 @@
     min-width: $min-width; min-height: $min-height;
     background-color: $theme-pink;
     overflow: hidden;
+    z-index: 1000;
   }
 
   /**

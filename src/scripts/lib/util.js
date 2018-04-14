@@ -2,6 +2,8 @@ const root = document.getElementById('root')
 const load_icon = document.querySelector('.load-view__body__panel__icon_type_4 .icon')
 const load_view = document.querySelector('.load-view')
 const load_view_body_close = document.querySelector('.load-view__body__close')
+const gab_animation = document.querySelector('.gab-animation')
+const gab_animation__end_block = document.querySelector('.gab-animation__close .end-block')
 
 /**
  * 画像のプリロード
@@ -65,6 +67,20 @@ export const finLoad = () => {
   load_view_body_close.addEventListener('animationend', e => {
     if(e.animationName === 'load-view__close-2') {
       root.removeChild(load_view)
+      startGabAnimation()
+    }
+  })
+}
+
+/**
+ * gab-animationの開始
+ */
+export const startGabAnimation = () => {
+  gab_animation.setAttribute('data-state', 'start')
+
+  gab_animation__end_block.addEventListener('animationend', e => {
+    if(e.animationName === 'gab-animation__close') {
+      root.removeChild(gab_animation)
     }
   })
 }
