@@ -1,0 +1,868 @@
+@include sp-layout {
+  .gab-animation {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: $theme-light-pink;
+    overflow: hidden;
+    z-index: 999;
+  }
+
+  /*** bg ***/
+  .gab-animation__bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    div {
+      width: 100%; height:12.5%;
+      background-color: $theme-bg;
+      transform: translateX(-100%);
+    }
+  }
+
+  /*** frame ***/
+  .gab-animation__frame {
+    position: absolute;
+    top: -100px; left: calc(50% - 50px);
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .area {
+      position: relative;
+      float: left;
+      width: 50%; height: 100%;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+      &::before { background-color: $theme-light-pink; }
+      &::after  { background-color: $theme-purple; }
+    }
+    .area:nth-child(1) {
+      &::after { transform: translate(calc(-100% + 5px), -100%); }
+    }
+    .area:nth-child(2) {
+      &::after { transform: translate(calc(100% - 5px), 100%); }
+    }
+
+    &::after {
+      content: ""; display: block;
+      position: absolute;
+      width: 100%; height: 100%;
+      background-image: url(../images/gab-animation/bg.png);
+      background-size: 30px;
+      opacity: 0;
+    }
+  }
+
+  .gab-animation__illust {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .paint-balls {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        float: left;
+        width: 50%; height: 100%;
+
+        &::after {
+          position: absolute;
+          top: calc(50% - 50px);
+          content: ""; display: block;
+          width: 100px; height: 100px;
+          background-color: #F0DB9E;
+          border-radius: 50%;
+        }
+      }
+      div:nth-child(1) { &::after { left: -100px; } }
+      div:nth-child(2) { &::after { right: -100px; } }
+    }
+
+    .illust {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      perspective: 400px;
+
+      &::after {
+        content: ""; display: block;
+        width: 100%; height: 100%;
+        background-image: url(../images/gab-animation/gab.png);
+        background-size: auto 90%;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        opacity: 0;
+      }
+    }
+  }
+
+  .gab-animation__effects {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    .ball {
+      position: absolute;
+      border-radius: 50%;
+    }
+    .ball:nth-child(2n - 1) { top: -60px; width: 60px; height: 60px; }
+    .ball:nth-child(2n) { top: -45px; width: 45px; height: 45px; }
+    .ball:nth-child(1) { background-color: $theme-light-pink; left: calc(50% - 150px); }
+    .ball:nth-child(2) { background-color: $theme-light-purple; left: calc(50% - 30px); }
+    .ball:nth-child(3) { background-color: $theme-gray; left: calc(50% + 45px); }
+    .ball:nth-child(4) { background-color: $theme-light-pink; left: calc(50% - 150px); }
+    .ball:nth-child(5) { background-color: $theme-light-purple; left: calc(50% - 30px); }
+    .ball:nth-child(6) { background-color: $theme-gray; left: calc(50% + 45px); }
+    .ball:nth-child(7) { background-color: $theme-light-pink; left: calc(50% - 150px); }
+    .ball:nth-child(8) { background-color: $theme-light-purple; left: calc(50% - 30px); }
+  }
+
+  .gab-animation__gauge {
+    position: absolute;
+    bottom: 50px; left: calc(50% - 150px);
+    width: 300px; height: 50px;
+    overflow: hidden;
+
+    .name {
+      width: 100px; height: 18px;
+      font-size: 14px;
+      color: $theme-purple;
+      line-height: 18px;
+      padding: 0 5px;
+      font-weight: bold;
+      box-sizing: border-box;
+      border: solid 2px $theme-purple;
+      border-bottom: none;
+      background-color: #eee;
+      transform: translateX(-100%);
+    }
+    .gauge {
+      width: 100%; height: 32px;
+      box-sizing: border-box;
+      border: solid 2px $theme-purple;
+      background-color: #ff2600;
+      transform: translateX(-100%);
+      overflow: hidden;
+
+      &::after {
+        width: 100%; height: 100%;
+        content: ""; display: block;
+        background-color: #86c351;
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .gab-animation__back-overray {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    section {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        float: left;
+        content: ""; display: block;
+        width: 50%; height: 100%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          width: 100%; height: 100%;
+        }
+      }
+      div:nth-child(1):after { transform: translateX(100%); }
+      div:nth-child(2):after { transform: translateX(-100%); }
+    }
+    section:nth-child(1) { div:after { background-color: $theme-pink; } }
+    section:nth-child(2) { div:after { background-color: $theme-light-pink; } }
+    section:nth-child(3) { div:after { background-color: $theme-bg; } }
+  }
+
+  .gab-animation__message {
+    position: absolute;
+    top: calc(50% - 74.5px); left: calc(50% - 200px);
+    width: 400px; height: 149px;
+    background-image: url(../images/gab-animation/message.png);
+    background-size: 100%;
+    opacity: 0;
+  }
+  
+  .gab-animation__front-overray {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    section {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      div {
+        float: left;
+        content: ""; display: block;
+        width: 50%; height: 100%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          width: 100%; height: 100%;
+          background-color: $theme-purple;
+        }
+      }
+      div:nth-child(1):after { transform: translateX(100%); }
+      div:nth-child(2):after { transform: translateX(-100%); }
+    }
+  }
+
+  .gab-animation__palette {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    
+    .paint-box {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      transform: scale(0.5);
+    }
+
+    .paint {
+      position: absolute; top: -100px;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background-color: $theme-bg;
+      opacity: 0;
+
+      div {
+        position: absolute;
+        top: 50%;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-color: $theme-bg;
+          transform: translateY(-100%);
+        }
+      }
+      div:nth-child(1) {
+        left: calc(50% - 5px);
+        width: 10px; height: 120px;
+        &::after { border-radius: 10px; }
+      }
+      div:nth-child(2) {
+        left: 2px;
+        width: 18px; height: 70px;
+        &::after { border-radius: 15px; }
+      }
+      div:nth-child(3) {
+        right: 20px;
+        width: 15px; height: 75px;
+        &::after { border-radius: 10px; }
+      }
+      div:nth-child(4) {
+        right: 0px;
+        width: 10px; height: 50px;
+        &::after { border-radius: 10px; }
+      }
+
+      .char {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background-color: $theme-bg;
+        }
+      }
+      .char-1 { background-image: url(../images/gab-animation/name/1.png); }
+      .char-2 { background-image: url(../images/gab-animation/name/2.png); }
+      .char-3 { background-image: url(../images/gab-animation/name/3.png); }
+      .char-4 { background-image: url(../images/gab-animation/name/4.png); }
+      .char-5 { background-image: url(../images/gab-animation/name/5.png); }
+    }
+    .paint:nth-child(1) { left: calc(50% - 330px); }
+    .paint:nth-child(2) { left: calc(50% - 190px); }
+    .paint:nth-child(3) { left: calc(50% - 50px); }
+    .paint:nth-child(4) { left: calc(50% + 90px); }
+    .paint:nth-child(5) { left: calc(50% + 230px); }
+
+    .frame {
+      position: absolute; left: 0;
+      width: 100%; height: calc((100% - 300px) / 2);
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+      div:nth-child(1) { background-color: $theme-gray; }
+      div:nth-child(2) { background-color: $theme-bg; }
+      div:nth-child(3) { background-color: $theme-light-pink; }
+      div:nth-child(4) { background-color: $theme-pink; }
+      div:nth-child(5) { background-color: $theme-mint; }
+    }
+    .frame-top {
+      top: 0;
+      div { transform: translateY(100%); }
+    }
+    .frame-bottom {
+      bottom: 0;
+      div { transform: translateY(-100%); }
+    }
+
+    .clock {
+      position: absolute;
+      top: calc((100% - 300px) / 2); left: 0;
+      width: 100%; height: 300px;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        transform: scale(0);
+      }
+      &::before {
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: dashed 5px $theme-mint;
+      }
+      &::after {
+        top: calc(50% - 125px);
+        left: calc(50% - 125px);
+        width: 250px; height: 250px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: solid 10px $theme-mint;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+      }
+
+      div {
+        position: absolute;
+        left: calc(50% - 5px); top: 50%;
+        width: 10px; height: 0;
+        background-color: $theme-mint;
+        z-index: 1;
+      }
+    }
+  }
+
+  .gab-animation__camera {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    perspective: 20px;
+    z-index: 2;
+
+    .layer {
+      position: absolute;
+      top: calc(50% - 225px); left: calc(50% - 325px);
+      width: 650px; height: 450px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #aaa;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        box-sizing: border-box;
+      }
+      &::before {
+        background-size: cover;
+        background-position: center;
+      }
+      &::after {
+        border: solid 25px #fff;
+        box-shadow: 0 0 10px #aaa inset;
+      }
+    }
+    .layer-1 {
+      transform: translateZ(20px) scale(calc(1 - (20 / 100)));
+      &::before { background-image: url(../images/gab-animation/comic/1.png); }
+    }
+    .layer-2 {
+      transform: translateZ(120px) scale(calc(1 - (120 / 200)));
+      &::before {
+        transform: translateY(-100%);
+        background-image: url(../images/gab-animation/comic/2.png);
+      }
+    }
+    .layer-3 {
+      transform: translateZ(220px) scale(calc(1 - (220 / 300)));
+      &::before {
+        transform: translateY(100%);
+        background-image: url(../images/gab-animation/comic/3.png);
+      }
+    }
+    .layer-4 {
+      transform: translateZ(320px) scale(calc(1 - (320 / 400)));
+      &::before {
+        transform: translateY(-100%);
+        background-image: url(../images/gab-animation/comic/4.png);
+      }
+    }
+  }
+
+  .gab-animation__close {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 6;
+
+    .effect {
+      position: absolute;
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      transform: scale(1.5);
+      overflow: hidden;
+
+      div {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        &:after {
+          content: ""; display: block;
+          position: absolute;
+          top: 5px; left: calc(50% - 8.75px);
+          width: 0; height: 0;
+          border: solid 5px transparent;
+          border-top: solid 17.5px $theme-purple;
+          opacity: 0;
+        }
+      }
+      div:nth-child(1) { transform: rotate(0deg); }
+      div:nth-child(2) { transform: rotate(30deg); }
+      div:nth-child(3) { transform: rotate(60deg); }
+      div:nth-child(4) { transform: rotate(90deg); }
+      div:nth-child(5) { transform: rotate(120deg); }
+      div:nth-child(6) { transform: rotate(150deg); }
+      div:nth-child(7) { transform: rotate(180deg); }
+      div:nth-child(8) { transform: rotate(210deg); }
+      div:nth-child(9) { transform: rotate(240deg); }
+      div:nth-child(10) { transform: rotate(270deg); }
+      div:nth-child(11) { transform: rotate(300deg); }
+      div:nth-child(12) { transform: rotate(330deg); }
+    }
+    .effect-1 { top: calc(50% - 50px); left: calc(50% - 50px); }
+    .effect-2 { top: 20px; right: 20px; }
+    .effect-3 { bottom: 20px; left: 20px; }
+
+    .ball {
+      position: absolute;
+      width: 250px; height: 250px;
+      border-radius: 50%;
+      background-color: $theme-purple;
+      transform: scale(0);
+
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 20%; left: 20%;
+        width: 60%; height: 60%;
+        border-radius: 50%;
+        background-color: $theme-light-purple;
+      }
+    }
+    .ball-1 { top: calc(20px - 125px); right: calc(20px - 125px); }
+    .ball-2 { top: calc(50% - 125px); left: calc(50% - 125px); }
+    .ball-3 { bottom: calc(20px - 125px); left: calc(20px - 125px); }
+
+    .end-block {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      .paint-ball {
+        position: absolute;
+        top: calc(50% - 20px); left: calc(50% - 20px);
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background-color: $theme-purple;
+        transform: scale(0);
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: ""; display: block;
+      }
+      &::before {
+        left: calc(50% - 1px); top: 50%;
+        width: 2px; height: 0;
+        background-color: $theme-purple;
+      }
+      &::after {
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        background-color: $theme-purple;
+        top: calc(50% - 100px); left: calc(50% - 100px);
+        transform: scale(0);
+      }
+    }
+  }
+
+  /*************************************************************************************************
+   * animation
+   *************************************************************************************************/
+  .gab-animation[data-state="start"] {
+    .gab-animation__bg {
+      div:nth-child(1) { animation: slide-right 0.4s ease 0s forwards; }
+      div:nth-child(2) { animation: slide-right 0.4s ease 0.1s forwards; }
+      div:nth-child(3) { animation: slide-right 0.4s ease 0.2s forwards; }
+      div:nth-child(4) { animation: slide-right 0.4s ease 0.3s forwards; }
+      div:nth-child(5) { animation: slide-right 0.4s ease 0.4s forwards; }
+      div:nth-child(6) { animation: slide-right 0.4s ease 0.5s forwards; }
+      div:nth-child(7) { animation: slide-right 0.4s ease 0.6s forwards; }
+      div:nth-child(8) { animation: slide-right 0.4s ease 0.7s forwards; }
+    }
+
+    .gab-animation__frame {
+      animation:
+        gab-animation__fall-frame 0.5s ease-out 1.1s forwards,
+        gab-animation__scale-frame 0.7s ease-in-out 1.6s forwards,
+        gab-animation__open-frame 0.4s ease-in-out 2.3s forwards,
+        gab-animation__radius-frame 1s ease-in-out 3.8s forwards;
+
+      &::after { animation: gab-animation__show-bg 0.4s ease 3.8s forwards; }
+
+      .area:nth-child(1) {
+        &::before {
+          animation:
+            gab-animation__move-y1-area-1 0.3s ease 2.7s forwards,
+            gab-animation__move-x-area-1 0.4s ease 3s forwards,
+            gab-animation__move-y2-area-1 0.3s ease 3.4s forwards;
+        }
+        &::after {
+          animation:
+            gab-animation__move-y-area-bg-1 0.3s ease 3.5s forwards,
+            gab-animation__move-x-area-bg-1 0.4s ease 3.8s forwards;
+        }
+      }
+      .area:nth-child(2) {
+        &::before {
+          animation:
+            gab-animation__move-y1-area-2 0.3s ease 2.7s forwards,
+            gab-animation__move-x-area-2 0.4s ease 3s forwards,
+            gab-animation__move-y2-area-2 0.3s ease 3.4s forwards;
+        }
+        &::after {
+          animation:
+            gab-animation__move-y-area-bg-2 0.3s ease 3.5s forwards,
+            gab-animation__move-x-area-bg-2 0.4s ease 3.8s forwards;
+        }
+      }
+    }
+
+    .gab-animation__illust {
+      .paint-balls {
+        div:nth-child(1) {
+          animation: gab-animation__x-paint-ball-1 0.4s ease-in-out 4s forwards;
+          &::after {
+            animation:
+              gab-animation__y-paint-ball-1 0.4s ease-in-out 4s forwards,
+              fadeout 0.1s ease 4.4s forwards;
+          }
+        }
+        div:nth-child(2) {
+          animation: gab-animation__x-paint-ball-2 0.4s ease-in-out 4s forwards;
+          &::after {
+            animation:
+              gab-animation__y-paint-ball-2 0.4s ease-in-out 4s forwards,
+              gab-animation__scale-frame 0.8s ease-in-out 4.4s forwards,
+              scale10 0.5s ease 5.2s forwards,
+              fadeout 0.5s ease 5.2s forwards;
+          }
+        }
+      }
+
+      .illust {
+        &::after {
+          animation:
+            fadein 0.1s ease 5.2s forwards,
+            gab-animation__rotate-illust 0.6s ease 5.2s forwards,
+            gab-animation__attack-gab 0.1s ease 5.7s alternate 10 forwards,
+            gab-animation__down-gab 0.8s ease 6.7s forwards;
+        }
+      }
+    }
+
+    .gab-animation__effects {
+      .ball:nth-child(1) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 5.6s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 5.8s forwards;
+      }
+      .ball:nth-child(2) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 5.7s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 5.9s forwards;
+      }
+      .ball:nth-child(3) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 5.8s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6s forwards;
+      }
+      .ball:nth-child(6) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 5.9s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6.1s forwards;
+      }
+      .ball:nth-child(5) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 6s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6.2s forwards;
+      }
+      .ball:nth-child(4) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 6.1s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6.3s forwards;
+      }
+      .ball:nth-child(7) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 6.2s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6.4s forwards;
+      }
+      .ball:nth-child(8) {
+        animation:
+          gab-animation__fall-ball-effect 0.2s ease-out 6.3s forwards,
+          gab-animation__scale-ball-effect 0.3s ease 6.5s forwards;
+      }
+    }
+
+    .gab-animation__gauge {
+      animation: fadeout 0.8s ease 6.7s forwards;
+      .name { animation: slide-right 0.35s ease 5.4s forwards; }
+      .gauge {
+        animation: slide-right 0.35s ease 5.5s forwards;
+        &::after { animation: slide-right 1s ease 5.7s reverse forwards; }
+      }
+    }
+
+    .gab-animation__back-overray {
+      section:nth-child(1) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.3s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.3s forwards; }
+      }
+      section:nth-child(2) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.4s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.4s forwards; }
+      }
+      section:nth-child(3) {
+        div:nth-child(1):after { animation: slide-left 0.5s ease 7.5s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.5s ease 7.5s forwards; }
+      }
+    }
+
+    .gab-animation__message { animation: gab-animation__message 0.4s ease 6.9s forwards; }
+
+    .gab-animation__front-overray {
+      section {
+        div:nth-child(1):after { animation: slide-left 0.7s ease 7.8s forwards; }
+        div:nth-child(2):after { animation: slide-right 0.7s ease 7.8s forwards; }
+      }
+    }
+
+    .gab-animation__palette {
+      .paint:nth-child(1) {
+        animation:
+          fadein 0.1s ease 9s forwards,
+          gab-animation__fall-paint-1 0.2s ease 9s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 9.2s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 9.2s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.2s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 9.2s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 9.2s reverse forwards; }
+      }
+      .paint:nth-child(2) {
+        animation:
+          fadein 0.1s ease 10s forwards,
+          gab-animation__fall-paint-2 0.2s ease 10s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 10.2s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 10.2s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.2s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 10.2s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 10.2s reverse forwards; }
+      }
+      .paint:nth-child(3) {
+        animation:
+          fadein 0.1s ease 8.5s forwards,
+          gab-animation__fall-paint-1 0.2s ease 8.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 8.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 8.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 8.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 8.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 8.7s reverse forwards; }
+      }
+      .paint:nth-child(4) {
+        animation:
+          fadein 0.1s ease 10.5s forwards,
+          gab-animation__fall-paint-2 0.2s ease 10.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 10.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 10.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 10.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 10.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 10.7s reverse forwards; }
+      }
+      .paint:nth-child(5) {
+        animation:
+          fadein 0.1s ease 9.5s forwards,
+          gab-animation__fall-paint-1 0.2s ease 9.5s forwards;
+        div:nth-child(1):after { animation: slide-bottom 2s ease 9.7s forwards; }
+        div:nth-child(2):after { animation: slide-bottom 1s ease 9.7s forwards; }
+        div:nth-child(3):after { animation: slide-bottom 1.8s ease 9.7s forwards; }
+        div:nth-child(4):after { animation: slide-bottom 0.9s ease 9.7s forwards; }
+        .char:after { animation: slide-top 1.8s ease-out 9.7s reverse forwards; }
+      }
+
+      .frame-top {
+        div:nth-child(1) { animation: slide-top 0.4s ease 12.5s forwards; }
+        div:nth-child(2) { animation: slide-top 0.4s ease 12.6s forwards; }
+        div:nth-child(3) { animation: slide-top 0.4s ease 12.7s forwards; }
+        div:nth-child(4) { animation: slide-top 0.4s ease 12.8s forwards; }
+        div:nth-child(5) { animation: slide-top 0.4s ease 12.9s forwards; }
+      }
+      .frame-bottom {
+        div:nth-child(1) { animation: slide-bottom 0.4s ease 12.5s forwards; }
+        div:nth-child(2) { animation: slide-bottom 0.4s ease 12.6s forwards; }
+        div:nth-child(3) { animation: slide-bottom 0.4s ease 12.7s forwards; }
+        div:nth-child(4) { animation: slide-bottom 0.4s ease 12.8s forwards; }
+        div:nth-child(5) { animation: slide-bottom 0.4s ease 12.9s forwards; }
+      }
+
+      .clock {
+        &::before {
+          animation:
+            gab-animation__show-clock-frame 0.5s ease 13.3s forwards,
+            rotate360 4s linear 13.8s infinite;
+        }
+        &::after {
+          animation:
+            gab-animation__show-clock-frame 0.5s ease 13.4s forwards,
+            rotate360 3s linear 13.9s infinite;
+        }
+        div {
+          animation:
+            gab-animation__show-clock-hand 0.3s ease 14s forwards,
+            gab-animation__reverse-clock-hand 0.4s ease 14.3s forwards,
+            gab-animation__rotate-clock-hand 0.3s ease-out 14.7s forwards,
+            gab-animation__scale-clock-hand 0.4s ease 14.8s forwards;
+        }
+      }
+    }
+
+    .gab-animation__camera {
+      animation:
+        gab-animation__camera 2.8s ease-in-out 15.2s forwards,
+        fadeout 0.1s ease 19s forwards;
+      .layer-2:before { animation: slide-bottom 0.6s ease 16.2s forwards; }
+      .layer-3:before { animation: slide-top 0.6s ease 16.6s forwards; }
+      .layer-4:before { animation: gab-animation__show-layer 0.8s ease 17.1s forwards; }
+    }
+
+    .gab-animation__close {
+      .effect-1 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease-out 18.3s reverse forwards,
+            fadein 0.1s ease 18.3s forwards,
+            fadeout 0.1s ease 18.8s forwards,
+            gab-animation__effect 0.6s ease-out 19.7s forwards,
+            fadein 0.1s ease 19.7s forwards,
+            fadeout 0.1s ease 20.2s forwards;
+        }
+      }
+      .effect-2 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease-out 17.7s reverse forwards,
+            fadein 0.1s ease 17.7s forwards,
+            fadeout 0.1s ease 18.2s forwards,
+            gab-animation__effect 0.6s ease-out 19.1s forwards,
+            fadein 0.1s ease 19.1s forwards,
+            fadeout 0.1s ease 19.6s forwards;
+        }
+      }
+      .effect-3 {
+        div:after {
+          animation:
+            gab-animation__effect 0.6s ease 18s reverse forwards,
+            fadein 0.1s ease 18s forwards,
+            fadeout 0.1s ease 18.5s forwards,
+            gab-animation__effect 0.6s ease 19.4s forwards,
+            fadein 0.1s ease 19.4s forwards,
+            fadeout 0.1s ease 19.9s forwards;
+        }
+      }
+      .ball-1 {
+        animation: gab-animation__scale-ball 0.5s ease 18.2s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.3s alternate 2 forwards; }
+      }
+      .ball-2 {
+        animation: gab-animation__scale-ball 0.5s ease 18.8s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.9s alternate 2 forwards; }
+      }
+      .ball-3 {
+        animation: gab-animation__scale-ball 0.5s ease 18.5s alternate 2 forwards;
+        &::after { animation: gab-animation__scale-ball 0.4s ease 18.6s alternate 2 forwards; }
+      }
+
+      .end-block {
+        .paint-ball:nth-child(1) {
+          animation:
+            scale0-1 0.4s ease 20s forwards,
+            gab-animation__move-end-block-1__sp 0.4s ease 20.4s forwards;
+        }
+        .paint-ball:nth-child(2) {
+          animation:
+            scale0-1 0.4s ease 20s forwards,
+            gab-animation__move-end-block-2__sp 0.4s ease 20.4s forwards;
+        }
+        &::before {
+          animation:
+            gab-animation__show-end-block__sp 0.4s ease 20.4s forwards,
+            rotate360 0.6s ease-in-out 20.8s forwards;
+        }
+        &::after {
+          animation:
+            scale0-1 0.6s ease-out 20.8s forwards,
+            scale1dot5 0.3s ease 21.4s 2 alternate forwards,
+            gab-animation__close__sp 0.5s ease 22s forwards;
+        }
+      }
+    }
+  }
+}
