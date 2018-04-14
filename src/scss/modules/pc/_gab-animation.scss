@@ -371,6 +371,65 @@
     }
   }
 
+  .gab-animation__camera {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    perspective: 20px;
+    z-index: 2;
+
+    .layer {
+      position: absolute;
+      top: calc(50% - 225px); left: calc(50% - 325px);
+      width: 650px; height: 450px;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #aaa;
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        box-sizing: border-box;
+      }
+      &::before {
+        background-size: cover;
+        background-position: center;
+      }
+      &::after {
+        border: solid 25px #fff;
+        box-shadow: 0 0 10px #aaa inset;
+      }
+    }
+    .layer-1 {
+      transform: translateZ(20px) scale(calc(1 - (20 / 100)));
+      &::before { background-image: url(../images/gab-animation/comic/1.png); }
+    }
+    .layer-2 {
+      transform: translateZ(120px) scale(calc(1 - (120 / 200)));
+      &::before {
+        transform: translateY(-100%);
+        background-image: url(../images/gab-animation/comic/2.png);
+      }
+    }
+    .layer-3 {
+      transform: translateZ(220px) scale(calc(1 - (220 / 300)));
+      &::before {
+        transform: translateY(100%);
+        background-image: url(../images/gab-animation/comic/3.png);
+      }
+    }
+    .layer-4 {
+      transform: translateZ(320px) scale(calc(1 - (320 / 400)));
+      &::before {
+        transform: translateY(-100%);
+        background-image: url(../images/gab-animation/comic/4.png);
+      }
+    }
+  }
+
   /*************************************************************************************************
    * animation
    *************************************************************************************************/
@@ -608,6 +667,13 @@
             gab-animation__scale-clock-hand 0.4s ease 14.8s forwards;
         }
       }
+    }
+
+    .gab-animation__camera {
+      animation: gab-animation__camera 2.8s ease-in-out 15.2s forwards;
+      .layer-2:before { animation: slide-bottom 0.6s ease 16.2s forwards; }
+      .layer-3:before { animation: slide-top 0.6s ease 16.6s forwards; }
+      .layer-4:before { animation: gab-animation__show-layer 0.8s ease 17.1s forwards; }
     }
   }
 }

@@ -157,3 +157,14 @@
   from { width: 10px; left: calc(50% - 5px); }
   to   { width: 100%; left: 0; }
 }
+
+@keyframes gab-animation__camera {
+  from { perspective: 20px; }
+  to   { perspective: 400px; }
+}
+@keyframes gab-animation__show-layer {
+  0% { transform: translateY(-100%); }
+  70% { transform: translateY(0%); }
+  85% { transform: translateY(-10px); }
+  100% { transform: translateY(0%); }
+}
