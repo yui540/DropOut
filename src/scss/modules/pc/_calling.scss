@@ -1,0 +1,55 @@
+@include pc-layout {
+  .calling {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    min-width: $min-width; min-height: $min-height;
+    background-color: $theme-purple;
+    z-index: 1001;
+  }
+
+  /*** bg ***/
+  .calling__bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    div {
+      position: relative;
+      float: left;
+      width: 25%; height: 25%;
+      overflow: hidden;
+
+      &::after {
+        content: ""; display: block;
+        width: 100%; height: 100%;
+        background-color: #333;
+        transform: translateX(-100%);
+      }
+    }
+
+    &::after { content: ""; display: block; clear: both; }
+  }
+
+  .calling[data-state="start"] {
+    /*** bg ***/
+    .calling__bg {
+      div:nth-child(1):after,
+      div:nth-child(2):after,
+      div:nth-child(3):after,
+      div:nth-child(4):after { animation: slide-right 0.4s ease 0s forwards; }
+      div:nth-child(5):after,
+      div:nth-child(6):after,
+      div:nth-child(7):after,
+      div:nth-child(8):after { animation: slide-right 0.4s ease 0.1s forwards; }
+      div:nth-child(9):after,
+      div:nth-child(10):after,
+      div:nth-child(11):after,
+      div:nth-child(12):after { animation: slide-right 0.4s ease 0.2s forwards; }
+      div:nth-child(13):after,
+      div:nth-child(14):after,
+      div:nth-child(15):after,
+      div:nth-child(16):after { animation: slide-right 0.4s ease 0.3s forwards; }
+    }
+  }
+}
