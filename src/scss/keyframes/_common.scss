@@ -30,6 +30,14 @@
   from { transform: scale(0); }
   to   { transform: scale(1); }
 }
+@keyframes scale0-0dot5 {
+  from { transform: scale(0); }
+  to   { transform: scale(0.5); }
+}
+@keyframes scale1-0dot5 {
+  from { transform: scale(1); }
+  to   { transform: scale(0.5); }
+}
 @keyframes scale10 {
   from { transform: scale(1); }
   to   { transform: scale(10); }
@@ -37,4 +45,13 @@
 @keyframes scale1dot5 {
   from { transform: scale(1); }
   to   { transform: scale(1.5); }
+}
+
+@keyframes width0-100 {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes height0-100 {
+  from { height: 0; }
+  to   { height: 100%; }
 }

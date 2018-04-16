@@ -4,6 +4,8 @@ const load_view = document.querySelector('.load-view')
 const load_view_body_close = document.querySelector('.load-view__body__close')
 const gab_animation = document.querySelector('.gab-animation')
 const gab_animation__end_block = document.querySelector('.gab-animation__close .end-block')
+const calling = document.querySelector('.calling')
+const calling__end = document.querySelector('.calling__end')
 
 /**
  * 画像のプリロード
@@ -82,6 +84,20 @@ export const startGabAnimation = () => {
     if(e.animationName === 'gab-animation__close'
       || e.animationName === 'gab-animation__close__sp') {
       root.removeChild(gab_animation)
+      startCalling()
+    }
+  })
+}
+
+/**
+ * callingの開始
+ */
+export const startCalling = () => {
+  calling.setAttribute('data-state', 'start')
+
+  calling__end.addEventListener('animationend', e => {
+    if(e.animationName === 'calling__end') {
+      root.removeChild(calling)
     }
   })
 }
