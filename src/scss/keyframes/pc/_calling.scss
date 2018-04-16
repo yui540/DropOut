@@ -28,3 +28,19 @@
   from { width: 0; left: 50%; }
   to   { width: 500px; left: calc(50% - 250px); }
 }
+
+@keyframes calling__show-live-view {
+  from { width: 0; margin-left: 50%; margin-top: 10px; }
+  to   { width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; }
+}
+
+@keyframes calling__char-name-frame-1 {
+  0%   { opacity: 0; transform: translate(4px, 4px); }
+  10%  { opacity: 1; }
+  100% { opacity: 1; transform: translate(0px, 0px); }
+}
+@keyframes calling__char-name-frame-2 {
+  0%   { opacity: 0; transform: translate(-4px, -4px); }
+  10%  { opacity: 1; }
+  100% { opacity: 1; transform: translate(0px, 0px); }
+}

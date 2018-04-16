@@ -195,7 +195,7 @@
   /*** controls-bar ***/
   .calling__controls-bar {
     position: absolute;
-    bottom: 60px; left: 50%;
+    bottom: 40px; left: 50%;
     width: 0px; height: 60px;
     background-color: #222;
     border-radius: 30px;
@@ -218,6 +218,89 @@
     }
     .btn .fa-phone { transform: rotate(225deg); color: #af5853; font-size: 30px; }
     .btn:last-child { margin-right: 0; }
+  }
+
+  /*** live-view ***/
+  .calling__live-view {
+    position: absolute;
+    left: calc(50% - 500px); top: 0;
+    width: 1000px; height: calc(100% - 140px);
+
+    .view {
+      position: absolute;
+      width: 50%; height: 50%;
+
+      .char {
+        margin-left: 50%;
+        margin-top: 10px;
+        width: 0; height: calc(100% - 20px);
+        border-radius: 8px;
+        overflow: hidden;
+
+        &::after {
+          content: ""; display: block;
+          width: 100%; height: 100%;
+          background-size: auto 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0;
+        }
+      }
+
+      .name {
+        position: absolute;
+        bottom: 20px; left: 20px;
+        width: 150px; height: 30px;
+        
+        &::before,
+        &::after {
+          content: ""; display: block;
+          position: absolute;
+          width: 80%; height: 80%;
+          background-color: #6C9A7B;
+          border-radius: 20px;
+          opacity: 0;
+        }
+        &::before { top: -4px; left: -4px; }
+        &::after  { bottom: -4px; right: -4px; }
+
+        span {
+          display: block;
+          position: absolute;
+          top: 0; left: 0;
+          width: 0%; height: 100%; 
+          border-radius: 15px;
+          background-color: #444;
+          font-size: 12px;
+          line-height: 30px;
+          text-align: center;
+          color: #fff;
+          overflow: hidden;
+          z-index: 1;
+        }
+      }
+    }
+    .view:nth-child(1) {
+      top: 0; left: 0;
+      .char {
+        background-color: $theme-light-purple;
+        &::after { background-image: url(../images/calling/icons/yui_large.png); }
+      }
+    }
+    .view:nth-child(2) {
+      top: 0; right: 0;
+      .char {
+        background-color: $theme-mint;
+        &::after { background-image: url(../images/calling/icons/eriri_large.png); }
+      }
+    }
+    .view:nth-child(3) {
+      bottom: 0; left: 25%;
+      .char {
+        background-color: $theme-pink;
+        &::after { background-image: url(../images/calling/icons/gab_large.png); }
+      }
+    }
   }
 
   .calling[data-state="start"] {
@@ -339,6 +422,55 @@
         animation:
           fadein 0.8s ease 7.2s forwards,
           scale0-1 0.8s ease 7.2s forwards;
+      }
+    }
+
+    /*** live-view ***/
+    .calling__live-view {
+      .view:nth-child(1) {
+        .char {
+          animation: calling__show-live-view 0.4s ease 8s forwards;
+          &::after {
+            animation:
+              fadein 0.3s ease 8.8s forwards,
+              slide-top 0.5s ease 8.8s forwards;
+          }
+        }
+        .name {
+          span { animation: width0-100 0.3s ease 9.7s forwards; }
+          &::before { animation: calling__char-name-frame-1 0.6s ease 10s forwards; }
+          &::after  { animation: calling__char-name-frame-2 0.6s ease 10s forwards; }
+        }
+      }
+      .view:nth-child(2) {
+        .char {
+          animation: calling__show-live-view 0.4s ease 8.2s forwards;
+          &::after {
+            animation:
+              fadein 0.3s ease 9s forwards,
+              slide-right 0.5s ease 9s forwards;
+          }
+        }
+        .name {
+          span { animation: width0-100 0.3s ease 9.9s forwards; }
+          &::before { animation: calling__char-name-frame-1 0.6s ease 10.2s forwards; }
+          &::after  { animation: calling__char-name-frame-2 0.6s ease 10.2s forwards; }
+        }
+      }
+      .view:nth-child(3) {
+        .char {
+          animation: calling__show-live-view 0.4s ease 8.4s forwards;
+          &::after {
+            animation:
+              fadein 0.3s ease 9.2s forwards,
+              slide-left 0.5s ease 9.2s forwards;
+          }
+        }
+        .name {
+          span { animation: width0-100 0.3s ease 10.1s forwards; }
+          &::before { animation: calling__char-name-frame-1 0.6s ease 10.4s forwards; }
+          &::after  { animation: calling__char-name-frame-2 0.6s ease 10.4s forwards; }
+        }
       }
     }
   }
