@@ -24,3 +24,7 @@
   to   { transform: scale(1) translate(0); opacity: 1; }
 }
 
+@keyframes calling__show-controls-bar {
+  from { width: 0; left: 50%; }
+  to   { width: 500px; left: calc(50% - 250px); }
+}
