@@ -6,3 +6,12 @@
   from { transform: rotate(45deg) scale(2); opacity: 0; }
   to   { transform: rotate(45deg) scale(1); opacity: 1; }
 }
+
+@keyframes calling__icon-frame-1 {
+  from { transform: scale(0) translate(-5px, 5px); opacity: 0; }
+  to   { transform: scale(1) translate(0); opacity: 1; }
+}
+@keyframes calling__icon-frame-2 {
+  from { transform: scale(0) translate(5px, -5px); opacity: 0; }
+  to   { transform: scale(1) translate(0); opacity: 1; }
+}

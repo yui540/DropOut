@@ -5,6 +5,7 @@
     width: 100%; height: 100%;
     min-width: $min-width; min-height: $min-height;
     background-color: $theme-purple;
+    overflow: hidden;
     z-index: 1001;
   }
 
@@ -34,7 +35,7 @@
   /*** controls-btn ***/
   .calling__controls-btn {
     position: absolute;
-    bottom: 200px; left: calc(50% - 250px);
+    bottom: 100px; left: calc(50% - 250px);
     width: 500px; height: 80px;
 
     .btn {
@@ -94,6 +95,93 @@
     }
   }
 
+  /*** icons ***/
+  .calling__icons {
+    position: absolute;
+    top: 100px; left: calc(50% - 400px);
+    width: 800px; height: 150px;
+
+    .icon-box {
+      position: relative;
+      margin-right: 100px;
+      float: left;
+      width: 200px; height: 200px;
+
+      .icon {
+        position: absolute;
+        width: 100%; height: 100%;
+        background-color: #fff;
+        border-radius: 50%;
+        transform: scale(0);
+        z-index: 1;
+
+        &::after {
+          margin: 5px;
+          content: ""; display: block;
+          width: calc(100% - 10px); height: calc(100% - 10px);
+          background-size: cover;
+          background-position: center;
+          border-radius: 50%;
+          transform: scale(0);
+        }
+      }
+
+      .name {
+        position: absolute;
+        left: 50px; bottom: -50px;
+        width: 100px; height: 30px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 30px;
+        color: #fff;
+        overflow: hidden;
+
+        span { display: block; transform: translateY(100%); }
+        &::after {
+          position: absolute;
+          bottom: 0; left: 0;
+          content: ""; display: block;
+          width: 100%; height: 1px;
+          transform: translateX(-100%);
+        }
+      }
+
+      &::before,
+      &::after {
+        content: ""; display: block;
+        position: absolute;
+        width: calc(100% - 70px); height: calc(100% - 70px);
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0;
+      }
+      &::before { top: -5px; left: -5px; }
+      &::after  { bottom: -5px; right: -5px; }
+    }
+    .icon-box:last-child { margin-right: 0; }
+    .icon-box:nth-child(1) {
+      .icon:after {
+        background-color: $theme-light-purple;
+        background-image: url(../images/calling/icons/yui.png);
+      }
+      .name:after { background-color: $theme-light-purple; }
+    }
+    .icon-box:nth-child(2) {
+      .icon:after {
+        background-color: $theme-pink;
+        background-image: url(../images/calling/icons/gab.png);
+      }
+      .name:after { background-color: $theme-pink; }
+    }
+    .icon-box:nth-child(3) {
+      .icon:after {
+        background-color: $theme-mint;
+        background-image: url(../images/calling/icons/eriri.png);
+      }
+      .name:after { background-color: $theme-mint; }
+    }
+  }
+
   .calling[data-state="start"] {
     /*** bg ***/
     .calling__bg {
@@ -113,6 +201,64 @@
       div:nth-child(14):after,
       div:nth-child(15):after,
       div:nth-child(16):after { animation: slide-right 0.4s ease 0.3s forwards; }
+    }
+
+    /*** icons ***/
+    .calling__icons {
+      .icon-box:nth-child(1) {
+        .icon {
+          animation:
+            scale0-0dot5 0.3s ease 2.5s alternate 2 forwards,
+            scale0-1 0.5s ease 3.1s forwards;
+          &::after {  
+            animation:
+              scale0-0dot5 0.3s ease 3.3s alternate 2 forwards,
+              scale0-1 0.5s ease 3.9s forwards;
+          }
+        }
+        .name {
+          span { animation: slide-top 0.7s ease 4.5s forwards; }
+          &::after { animation: slide-right 0.3s ease 4.6s forwards; }
+        }
+        &::before { animation: calling__icon-frame-1 0.8s ease 4s forwards; }
+        &::after  { animation: calling__icon-frame-2 0.8s ease 4.1s forwards; }
+      }
+      .icon-box:nth-child(2) {
+        .icon {
+          animation:
+            scale0-0dot5 0.3s ease 1.5s alternate 2 forwards,
+            scale0-1 0.5s ease 2.1s forwards;
+          &::after {  
+            animation:
+              scale0-0dot5 0.3s ease 2.3s alternate 2 forwards,
+              scale0-1 0.5s ease 2.9s forwards;
+          }
+        }
+        .name {
+          span { animation: slide-top 0.7s ease 3.5s forwards; }
+          &::after { animation: slide-right 0.3s ease 3.6s forwards; }
+        }
+        &::before { animation: calling__icon-frame-1 0.8s ease 3s forwards; }
+        &::after  { animation: calling__icon-frame-2 0.8s ease 3.1s forwards; }
+      }
+      .icon-box:nth-child(3) {
+        .icon {
+          animation:
+            scale0-0dot5 0.3s ease 3.5s alternate 2 forwards,
+            scale0-1 0.5s ease 4.1s forwards;
+          &::after {  
+            animation:
+              scale0-0dot5 0.3s ease 4.3s alternate 2 forwards,
+              scale0-1 0.5s ease 4.9s forwards;
+          }
+        }
+        .name {
+          span { animation: slide-top 0.7s ease 5.5s forwards; }
+          &::after { animation: slide-right 0.3s ease 5.6s forwards; }
+        }
+        &::before { animation: calling__icon-frame-1 0.8s ease 5s forwards; }
+        &::after  { animation: calling__icon-frame-2 0.8s ease 5.1s forwards; }
+      }
     }
 
     /*** controls-btn ***/
