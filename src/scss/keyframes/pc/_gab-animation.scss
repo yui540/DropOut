@@ -159,7 +159,7 @@
 }
 
 @keyframes gab-animation__camera {
-  from { perspective: 20px; }
+  from { perspective: 0px; }
   to   { perspective: 400px; }
 }
 @keyframes gab-animation__show-layer {
