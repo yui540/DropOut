@@ -93,6 +93,16 @@
       right: 0;
       .fa-phone { color: #6C9A7B; transform: rotate(45deg); }
     }
+
+    .touch {
+      position: absolute;
+      top: 0; right: 0;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      border: solid 40px #fff;
+      box-sizing: border-box;
+      opacity: 0;
+    }
   }
 
   /*** icons ***/
@@ -205,6 +215,8 @@
 
     /*** icons ***/
     .calling__icons {
+      animation: fadeout 0.5s ease 6.6s forwards;
+      .icon-box .name { animation: fadeout 0.5s ease 6.6s forwards; }
       .icon-box:nth-child(1) {
         .icon {
           animation:
@@ -263,6 +275,7 @@
 
     /*** controls-btn ***/
     .calling__controls-btn {
+      animation: fadeout 0.5s ease 6.6s forwards;
       .btn-1 {
         div:nth-child(1):after { animation: slide-left 0.6s ease 0.7s forwards; }
         div:nth-child(2):after { animation: slide-bottom 0.6s ease 0.7s forwards; }
@@ -271,12 +284,14 @@
         .fa-phone { animation: calling__show-btn-1 0.7s ease 1s forwards; }
       }
       .btn-2 {
+        animation: calling__press-btn 0.3s ease 5.9s alternate 2 forwards;
         div:nth-child(1):after { animation: slide-left 0.6s ease 0.9s forwards; }
         div:nth-child(2):after { animation: slide-bottom 0.6s ease 0.9s forwards; }
         div:nth-child(3):after { animation: slide-right 0.6s ease 0.9s forwards; }
         div:nth-child(4):after { animation: slide-top 0.6s ease 0.9s forwards; }
         .fa-phone { animation: calling__show-btn-2 0.7s ease 1.2s forwards; }
       }
+      .touch { animation: calling__touch-btn 0.6s ease 5.9s forwards; }
     }
   }
 }

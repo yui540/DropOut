@@ -34,6 +34,10 @@
   from { transform: scale(0); }
   to   { transform: scale(0.5); }
 }
+@keyframes scale1-0dot5 {
+  from { transform: scale(1); }
+  to   { transform: scale(0.5); }
+}
 @keyframes scale10 {
   from { transform: scale(1); }
   to   { transform: scale(10); }
