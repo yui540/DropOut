@@ -1,0 +1,58 @@
+@keyframes calling__show-btn-1 {
+  from { transform: rotate(180deg) scale(2); opacity: 0; }
+  to   { transform: rotate(180deg) scale(1); opacity: 1; }
+}
+@keyframes calling__show-btn-2 {
+  from { transform: rotate(45deg) scale(2); opacity: 0; }
+  to   { transform: rotate(45deg) scale(1); opacity: 1; }
+}
+@keyframes calling__touch-btn {
+  from { border-width: 40px; opacity: 0; transform: scale(0.6); }
+  to   { border-width: 0px; opacity: 0.8; transform: scale(3); }
+}
+@keyframes calling__press-btn {
+  from { transform: scale(1) rotate(45deg); opacity: 1; }
+  to   { transform: scale(0.6) rotate(45deg); opacity: 0.6; }
+}
+
+@keyframes calling__icon-frame-1 {
+  from { transform: scale(0) translate(-5px, 5px); opacity: 0; }
+  to   { transform: scale(1) translate(0); opacity: 1; }
+}
+@keyframes calling__icon-frame-2 {
+  from { transform: scale(0) translate(5px, -5px); opacity: 0; }
+  to   { transform: scale(1) translate(0); opacity: 1; }
+}
+
+@keyframes calling__show-controls-bar {
+  from { width: 0; left: 50%; }
+  to   { width: 500px; left: calc(50% - 250px); }
+}
+
+@keyframes calling__show-live-view {
+  from { width: 0; margin-left: 50%; margin-top: 10px; }
+  to   { width: calc(100% - 20px); margin-left: 10px; margin-top: 10px; }
+}
+
+@keyframes calling__char-name-frame-1 {
+  0%   { opacity: 0; transform: translate(4px, 4px); }
+  10%  { opacity: 1; }
+  100% { opacity: 1; transform: translate(0px, 0px); }
+}
+@keyframes calling__char-name-frame-2 {
+  0%   { opacity: 0; transform: translate(-4px, -4px); }
+  10%  { opacity: 1; }
+  100% { opacity: 1; transform: translate(0px, 0px); }
+}
+
+@keyframes calling__show-say {
+  0% { transform: scale(8); opacity: 0; }
+  70% { transform: scale(1); opacity: 1; }
+  85% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes calling__end {
+  from { transform: translateY(-100%); }
+  to   { transform: translateY(0%); }
+}
