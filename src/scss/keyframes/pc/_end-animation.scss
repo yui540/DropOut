@@ -1,0 +1,63 @@
+@keyframes end-animation__show-paint {
+  0%   { opacity: 0; transform: scale(8); border-radius: 50%; }
+  40%  { border-radius: 50%; }
+  100% { opacity: 1; transform: scale(1); border-radius: 0%; }
+}
+
+@keyframes end-animation__end-roll-color-1 {
+  from { background-color: $theme-mint; }
+  to   { background-color: $theme-pink; }
+}
+@keyframes end-animation__end-roll-color-2 {
+  from { background-color: $theme-pink; }
+  to   { background-color: $theme-light-purple; }
+}
+@keyframes end-animation__end-roll-color-3 {
+  from { background-color: $theme-light-purple; }
+  to   { background-color: $theme-purple; }
+}
+@keyframes end-animation__end-roll-color-4 {
+  from { background-color: $theme-purple; }
+  to   { background-color: $theme-light-pink; }
+}
+
+@keyframes end-animation__move-text-ball-1 {
+  from { transform: translateX(800px) rotate(0deg); opacity: 0; }
+  to   { transform: translateX(0px) rotate(-15deg); opacity: 1; }
+}
+@keyframes end-animation__jump-text-ball-1 {
+  0%   { transform: translateY(300px) scale(0); }
+  50%  { transform: translateY(-150px) scale(0.5); }
+  100% { transform: translateY(0px) scale(1); }
+}
+@keyframes end-animation__move-text-ball-2 {
+  from { transform: translateY(800px) rotate(0deg); opacity: 0; }
+  to   { transform: translateY(0px) rotate(15deg); opacity: 1; }
+}
+@keyframes end-animation__jump-text-ball-2 {
+  0%   { transform: translateX(-300px) scale(0); }
+  50%  { transform: translateX(150px) scale(0.5); }
+  100% { transform: translateX(0px) scale(1); }
+}
+
+@keyframes end-animation__move-text-ball-3 {
+  from { transform: translateX(800px) rotate(0deg); opacity: 0; }
+  to   { transform: translateX(0px) rotate(-15deg); opacity: 1; }
+}
+@keyframes end-animation__jump-text-ball-3 {
+  0%   { transform: translateY(-300px) scale(0); }
+  50%  { transform: translateY(150px) scale(0.5); }
+  100% { transform: translateY(0px) scale(1); }
+}
+
+@keyframes end-animation__down-window {
+  0% { transform: translateY(-100%); }
+  60% { transform: translateY(0%); }
+  80% { transform: translateY(-30px); }
+  100% { transform: translateY(0%); }
+}
+@keyframes end-animation__end {
+  0%   { transform: rotateZ(-20deg) rotateX(0deg); opacity: 1; }
+  50%  { opacity: 1; }
+  100% { transform: rotateZ(-20deg) rotateX(90deg); opacity: 0; }
+}
