@@ -1,4 +1,4 @@
-@include sp-layout {
+@include tablet-layout {
   .end-animation {
     position: absolute;
     top: 0; left: 0;
@@ -21,7 +21,7 @@
 
       .text-ball {
         position: absolute;
-        width: 90px; height: 90px;
+        width: 180px; height: 180px;
         border-radius: 50%;
         opacity: 0;
 
@@ -31,7 +31,7 @@
           width: 100%; height: 100%;
           background-color: #F0EFE7;
           border-radius: 50%;
-          border: solid 5px #F0EFE7;
+          border: solid 10px #F0EFE7;
           box-sizing: border-box;
           overflow: hidden;
 
@@ -56,23 +56,23 @@
         }
       }
       .text-ball:nth-child(1) {
-        top: 25px; left: 25px;
+        top: 50px; left: 50px;
         .inner:after { background-image: url(../images/end-animation/end-roll/1.png); }
       }
       .text-ball:nth-child(2) {
-        top: 25px; right: 25px;
+        top: 50px; right: 50px;
         .inner:after { background-image: url(../images/end-animation/end-roll/2.png); }
       }
       .text-ball:nth-child(3) {
-        bottom: 25px; left: 25px;
+        bottom: 50px; left: 50px;
         .inner:after { background-image: url(../images/end-animation/end-roll/3.png); }
       }
     }
 
     .paints {
       position: absolute;
-      top: calc(50% - 40px); left: calc(50% - 40px);
-      width: 80px; height: 80px;
+      top: calc(50% - 60px); left: calc(50% - 60px);
+      width: 120px; height: 120px;
 
       div {
         float: left;
@@ -100,7 +100,7 @@
 
       img {
         display: block;
-        height: 100px;
+        height: 200px;
         position: absolute;
         bottom: 30px; right: 0px;
         transform: rotateZ(-20deg);
