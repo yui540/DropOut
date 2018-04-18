@@ -81,6 +81,18 @@
       .inner { transform: scale(1.2); }
     }
   }
+  
+  /*** main-illust ***/
+  .top-page__main-illust {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url(../images/top-page/gab.png);
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
 
   .top-page[data-state="start"] {
     /*** ring ***/
@@ -90,6 +102,13 @@
         div:nth-child(1n):after { animation: top-page__show-ring 0.4s ease 0s forwards; }
         div:nth-child(2n):after { animation: top-page__show-ring 0.4s ease 0.05s forwards; }
       }
+    }
+
+    /*** main-illust ***/
+    .top-page__main-illust {
+      animation:
+        scale0-1 0.4s ease 0.2s forwards,
+        fadein 0.4s ease 0.2s forwards;
     }
   }
 }
