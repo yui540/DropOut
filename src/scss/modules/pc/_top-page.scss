@@ -94,6 +94,53 @@
     opacity: 0;
   }
 
+  /*** frame ***/
+  .top-page__frame {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    section {
+      position: absolute;
+      width: 45px; height: 45px;
+
+      div {
+        position: absolute;
+        background-color: $theme-purple;
+        border-radius: 3px;
+        opacity: 0.8;
+        transform: scale(0);
+      }
+      div:nth-child(1),
+      div:nth-child(3) { width: 12px; height: 12px; }
+      div:nth-child(2) { width: 25px; height: 25px; }
+    }
+    section:nth-child(1) {
+      top: 20px; left: 20px;
+      div:nth-child(1) { top: 0; right: 0; }
+      div:nth-child(2) { top: 0; left: 0; }
+      div:nth-child(3) { bottom: 0; left: 0; }
+    }
+    section:nth-child(2) {
+      top: 20px; right: 20px;
+      div:nth-child(1) { top: 0; left: 0; }
+      div:nth-child(2) { top: 0; right: 0; }
+      div:nth-child(3) { bottom: 0; right: 0; }
+    }
+    section:nth-child(3) {
+      bottom: 20px; left: 20px;
+      div:nth-child(1) { top: 0; left: 0; }
+      div:nth-child(2) { bottom: 0; left: 0; }
+      div:nth-child(3) { bottom: 0; right: 0; }
+    }
+    section:nth-child(4) {
+      bottom: 20px; right: 20px;
+      div:nth-child(1) { top: 0; right: 0; }
+      div:nth-child(2) { bottom: 0; right: 0; }
+      div:nth-child(3) { bottom: 0; left: 0; }
+    }
+  }
+
   .top-page[data-state="start"] {
     /*** ring ***/
     .top-page__ring {
@@ -109,6 +156,15 @@
       animation:
         scale0-1 0.4s ease 0.2s forwards,
         fadein 0.4s ease 0.2s forwards;
+    }
+
+    /*** frame ***/
+    .top-page__frame {
+      section {
+        div:nth-child(2) { animation: scale0-1 0.4s ease 0.6s forwards; }
+        div:nth-child(1), 
+        div:nth-child(3) { animation: scale0-1 0.4s ease 0.7s forwards; }
+      }
     }
   }
 }
