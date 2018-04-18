@@ -1,0 +1,8 @@
+@keyframes top-page__show-ring {
+  from { transform: translateY(200px); opacity: 0; }
+  to   { transform: translateY(0px); opacity: 1; }
+}
+@keyframes top-page__rotate-ring {
+  from { transform: rotate(0deg) scale(1.2); }
+  to   { transform: rotate(360deg) scale(1.2); }
+}

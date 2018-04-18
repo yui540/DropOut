@@ -1,0 +1,95 @@
+@include pc-layout {
+  .top-page {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: $theme-bg;
+    overflow: hidden;
+    z-index: 1001;
+
+    &::before {
+      content: ""; display: block;
+      width: 100%; height: 100%;
+      background-image: url(../images/bg.png);
+      background-size: 15px;
+      opacity: 0.4;
+    }
+  }
+
+  /*** ring ***/
+  .top-page__ring {
+    position: absolute;
+    top: calc(50% - 325px); left: calc(50% - 325px);
+    width: 650px; height: 650px;
+    border-radius: 50%;
+
+    .wrap {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+
+      .inner {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        div {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          &::after {
+            position: absolute;
+            top: 0px; left: calc(50% - 50px);
+            content: ""; display: block;
+            width: 0; height: 0;
+            border-top: solid 120px transparent;
+            border-left: solid 45px transparent;
+            border-right: solid 45px transparent;
+            opacity: 0;
+          }
+        }
+        div:nth-child(1n):after { border-top-color: $theme-pink; }
+        div:nth-child(2n):after { border-top-color: $theme-light-pink; }
+        div:nth-child(3n):after { border-top-color: $theme-purple; }
+        div:nth-child(4n):after { border-top-color: $theme-light-purple; }
+        div:nth-child(5n):after { border-top-color: $theme-gray; }
+        div:nth-child(1)  { transform: rotate(0deg); }
+        div:nth-child(2)  { transform: rotate(10deg); }
+        div:nth-child(3)  { transform: rotate(30deg); }
+        div:nth-child(4)  { transform: rotate(40deg); }
+        div:nth-child(5)  { transform: rotate(60deg); }
+        div:nth-child(6)  { transform: rotate(70deg); }
+        div:nth-child(7)  { transform: rotate(90deg); }
+        div:nth-child(8)  { transform: rotate(100deg); }
+        div:nth-child(9)  { transform: rotate(120deg); }
+        div:nth-child(10) { transform: rotate(130deg); }
+        div:nth-child(11) { transform: rotate(150deg); }
+        div:nth-child(12) { transform: rotate(160deg); }
+        div:nth-child(13) { transform: rotate(180deg); }
+        div:nth-child(14) { transform: rotate(190deg); }
+        div:nth-child(15) { transform: rotate(210deg); }
+        div:nth-child(16) { transform: rotate(220deg); }
+        div:nth-child(17) { transform: rotate(240deg); }
+        div:nth-child(18) { transform: rotate(250deg); }
+        div:nth-child(19) { transform: rotate(270deg); }
+        div:nth-child(20) { transform: rotate(280deg); }
+        div:nth-child(21) { transform: rotate(300deg); }
+        div:nth-child(22) { transform: rotate(310deg); }
+        div:nth-child(23) { transform: rotate(330deg); }
+        div:nth-child(24) { transform: rotate(340deg); }
+      }
+      .inner { transform: scale(1.2); }
+    }
+  }
+
+  .top-page[data-state="start"] {
+    /*** ring ***/
+    .top-page__ring {
+      .inner { 
+        animation: top-page__rotate-ring 150s linear 0s infinite;
+        div:nth-child(1n):after { animation: top-page__show-ring 0.4s ease 0s forwards; }
+        div:nth-child(2n):after { animation: top-page__show-ring 0.4s ease 0.05s forwards; }
+      }
+    }
+  }
+}
