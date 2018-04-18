@@ -6,3 +6,29 @@
   from { transform: rotate(0deg) scale(1.2); }
   to   { transform: rotate(360deg) scale(1.2); }
 }
+
+@keyframes top-page__show-message {
+  from { width: 0; }
+  to   { width: 250px; }
+}
+@keyframes top-page__hidden-message {
+  from { width: 250px; left: calc(50% - 125px); }
+  to   { width: 0px; left: 50%; }
+}
+
+@keyframes top-page__scale-nav {
+  from { width: 200px; left: calc(50% - 100px); }
+  to   { width: 700px; left: calc(50% - 350px); }
+}
+@keyframes top-page__rotate-nav-1 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(20deg); }
+}
+@keyframes top-page__rotate-nav-2 {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-20deg); }
+}
+@keyframes top-page__show-nav-text {
+  from { color: transparent; }
+  to   { color: #fff; }
+}
