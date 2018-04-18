@@ -1,0 +1,26 @@
+@keyframes top-page__rotate-ring__sp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes top-page__show-message__sp {
+  from { width: 0; }
+  to   { width: 180px; }
+}
+@keyframes top-page__hidden-message__sp {
+  from { width: 180px; left: calc(50% - 90px); }
+  to   { width: 0px; left: 50%; }
+}
+
+@keyframes top-page__scale-nav__sp {
+  from { width: 100px; left: calc(50% - 50px); }
+  to   { width: 360px; left: calc(50% - 180px); }
+}
+@keyframes top-page__rotate-nav-1__sp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(25deg); }
+}
+@keyframes top-page__rotate-nav-2__sp {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-25deg); }
+}
