@@ -68,6 +68,26 @@ export const setRingSize = () => {
 }
 
 /**
+ * ナビゲーションボタンホバー時のイベント監視
+ */
+export const bindNav = () => {
+  const navs = document.querySelectorAll('.top-page__global-nav a')
+
+  navs.forEach((nav, key) => {
+    /* mouseover ------------------------------------------------- */
+    nav.addEventListener('mouseover', e => {
+      const color = e.target.getAttribute('data-color')
+      top_page.setAttribute('data-color', color)
+    })
+
+    /* mouseout -------------------------------------------------- */
+    nav.addEventListener('mouseout', e => {
+      top_page.setAttribute('data-color', '')
+    })
+  })
+}
+
+/**
  * ロードの開始タイミングを取得
  * @param fn : コールバック関数
  */

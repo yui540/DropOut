@@ -8,6 +8,7 @@ import './components/app.tag'
 
 // init
 util.setRingSize()
+util.bindNav()
 
 // loading
 util.startLoading(() => {
