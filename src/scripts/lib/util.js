@@ -146,5 +146,13 @@ export const startEndAnimation = () => {
 
   end_animation__end.addEventListener('animationend', e => {
     root.removeChild(end_animation)
+    startTopPage()
   })
+}
+
+/**
+ * top-pageの開始
+ */
+export const startTopPage = () => {
+  top_page.setAttribute('data-state', 'start')
 }
