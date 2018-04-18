@@ -35,6 +35,7 @@
     top: calc(50% - 325px); left: calc(50% - 325px);
     width: 650px; height: 650px;
     border-radius: 50%;
+    opacity: 0.6;
     z-index: 1;
 
     .wrap {
@@ -180,15 +181,31 @@
           position: absolute; top: 0;
           width: 200px; height: 50px;
           border-radius: 30px;
-          box-shadow: 0 0 3px rgba(255,255,255,1);
           font-size: 17px;
           font-weight: bold;
           color: transparent;
           text-align: center;
           line-height: 50px;
+          overflow: hidden;
           transition: all 0.3s ease 0s;
+
+          &::before,
+          &::after {
+            content: ""; display: block;
+            position: absolute;
+            width: 60%; height: 1px;
+            background-color: #fff;
+            opacity: 0.6;
+            transition: all 0.5s ease 0s;
+          }
+          &::before { top: 5px; left: 5px; transform: translateX(calc(-100% + -5px)); }
+          &::after  { bottom: 5px; right: 5px; transform: translateX(calc(100% + 5px)); }
         }
-        a:hover { transform: scale(1.2); }
+        a:hover {
+          transform: scale(1.2); border-radius: 0;
+          &::before,
+          &::after { transform: translateX(0); }
+        }
         a:nth-child(1) { left: 0; }
         a:nth-child(2) { right: 0; }
       }
@@ -208,7 +225,7 @@
       width: 0px; height: 50px;
       border-radius: 30px;
       background-color: $theme-purple;
-      box-shadow: 0 0 3px rgba(255,255,255,1);
+      box-shadow: 0 0 3px rgba(255,255,255,0.5);
       overflow: hidden;
 
       h3 {
@@ -219,6 +236,24 @@
         line-height: 50px;
         transform: translateY(100%);
       } 
+    }
+  }
+
+  /*** logo ***/
+  .top-page__logo {
+    position: absolute;
+    top: calc(50% - 50px); left: 0;
+    width: 100%; height: 100px;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 0;
+    z-index: 1;
+
+    img {
+      position: absolute;
+      left: calc(50% - 150px); top: 0;
+      display: block;
+      background-color: rgba(255,255,255,0.2);
+      height: 100px;
     }
   }
 
@@ -247,6 +282,9 @@
         div:nth-child(3) { animation: scale0-1 0.4s ease 0.7s forwards; }
       }
     }
+
+    /*** logo ***/
+    .top-page__logo { animation: fadein 2s ease 2.7s forwards; }
 
     /*** global-nav ***/
     .top-page__global-nav {
