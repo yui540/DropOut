@@ -1,13 +1,15 @@
-const root = document.getElementById('root')
-const load_icon = document.querySelector('.load-view__body__panel__icon_type_4 .icon')
-const load_view = document.querySelector('.load-view')
-const load_view_body_close = document.querySelector('.load-view__body__close')
-const gab_animation = document.querySelector('.gab-animation')
+const root                     = document.getElementById('root')
+const load_icon                = document.querySelector('.load-view__body__panel__icon_type_4 .icon')
+const load_view                = document.querySelector('.load-view')
+const load_view_body_close     = document.querySelector('.load-view__body__close')
+const gab_animation            = document.querySelector('.gab-animation')
 const gab_animation__end_block = document.querySelector('.gab-animation__close .end-block')
-const calling = document.querySelector('.calling')
-const calling__end = document.querySelector('.calling__end')
-const end_animation = document.querySelector('.end-animation')
-const end_animation__end = document.querySelector('.end-animation .window img')
+const calling                  = document.querySelector('.calling')
+const calling__end             = document.querySelector('.calling__end')
+const end_animation            = document.querySelector('.end-animation')
+const end_animation__end       = document.querySelector('.end-animation .window img')
+const top_page                 = document.querySelector('.top-page')
+const top_page__wrap           = document.querySelector('.top-page .wrap')
 
 /**
  * 画像のプリロード
@@ -52,6 +54,17 @@ export const isSP = () => {
  */
 export const isPC = () => {
   return !isSP()
+}
+
+/**
+ * top-page__ringのサイズを設定
+ */
+export const setRingSize = () => {
+  const default_size = 650
+  const window_size = top_page.clientHeight
+  const per = window_size / default_size
+  
+  top_page__wrap.style.transform = `scale(${ per })`
 }
 
 /**
