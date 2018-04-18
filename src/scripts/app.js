@@ -6,6 +6,10 @@ import preload_json from './config/preload'
 // components
 import './components/app.tag'
 
+// init
+util.setRingSize()
+util.bindNav()
+
 // loading
 util.startLoading(() => {
   util.preload(preload_json, () => {
