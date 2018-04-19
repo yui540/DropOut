@@ -1,0 +1,55 @@
+@include sp-layout {
+  .history-page {
+
+    .history-box {
+      margin-top: 50px;
+
+      section {
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        border: dashed 1px $theme-purple;
+        border-radius: 10px;
+
+        .version {
+          font-size: 14px;
+          color: $theme-light-purple;
+          margin-bottom: 10px;
+        }
+
+        .title {
+          font-size: 15px;
+          text-align: center;
+          padding: 6px 0;
+          color: #fff;
+          margin-bottom: 8px;
+          border-radius: 10px;
+          background-color: $theme-light-purple;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        a {
+          display: block;
+          width: 180px; height: 35px;
+          margin: 0 auto;
+          border: dashed 2px $theme-light-purple;
+          border-radius: 10px;
+          font-size: 14px;
+          color: $theme-purple;
+          display: block;
+          text-align: center;
+          line-height: 35px;
+          margin-top: 20px;
+          transition: all 0.35s ease 0s;
+        }
+        a:hover { background-color: $theme-purple; color: $theme-bg; }
+      }
+    }
+  }
+}
