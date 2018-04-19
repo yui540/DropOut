@@ -5,7 +5,7 @@
     width: 100%; height: 100%;
     background-color: $theme-bg;
     overflow: hidden;
-    z-index: 996;
+    z-index: 1001;
 
     &::after {
       content: ""; display: block;
@@ -319,6 +319,7 @@
     transform: translateX(calc(100% + 5px));
     overflow: hidden;
     z-index: 1;
+    transition: all 0.3s ease 0s;
 
     a {
       position: relative;
@@ -329,10 +330,14 @@
       text-align: center;
       line-height: 50px;
       color: $theme-purple;
-      background-color: $theme-mint;
+      transition: all 0.3s ease 0s;
 
       i { font-size: 20px; margin-right: 5px; }
     }
+  }
+  .top-page__share-btn:hover {
+    a { color: #fff; }
+    background-color: $theme-pink;
   }
 
   .top-page[data-state="start"] {

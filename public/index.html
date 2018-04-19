@@ -333,7 +333,7 @@
         </section>
       </section>
       <!--********************************** top-page ***************************************-->
-      <section class="top-page">
+      <section class="top-page" data-state="start">
         <section class="top-page__ring">
           <div class="wrap">
             <div class="inner">
@@ -357,12 +357,12 @@
         <section class="top-page__global-nav">
           <nav class="nav-box">
             <section>
-              <a data-color="pink" href="#">私について</a>
-              <a data-color="light-pink" href="#">思い出</a>
+              <a data-href="profile-page" data-color="pink" href="#">私について</a>
+              <a data-href="memories-page" data-color="light-pink" href="#">思い出</a>
             </section>
             <section>
-              <a data-color="light-purple" href="#">このサイトの歴史</a>
-              <a data-color="purple" href="#">作ったもの</a>
+              <a data-href="history-page" data-color="light-purple" href="#">このサイトの歴史</a>
+              <a data-href="product-page" data-color="purple" href="#">作ったもの</a>
             </section>
           </nav>
           <div class="message"><h3>ようこそ、魔法少女サイトへ</h3></div>
@@ -383,6 +383,66 @@
             <i class="fab fa-twitter"></i>でシェアする
           </a>
         </section>
+      </section>
+      <!--********************************** page-box ***************************************-->
+      <section class="page-box">
+        <section class="page-box__bg"><div></div><div></div></section>
+        <a class="page-box__close-btn" href="#">
+          <section></section>
+          <section><div></div></section>
+        </a>
+        <article class="page-box__content">
+
+          <!--**** profile ****-->
+          <section class="profile-page" style="display: none">
+            <section class="page-title">
+              <div></div><div></div><div></div><div></div>
+              <h2>私について</h2>
+            </section>
+            <section class="profile-page__body">
+              <div class="icon"><div></div><div></div><div></div><div></div></div>
+              <h3 class="name">yuki540</h3>
+              <div class="info">
+                <div class="info-li">
+                  <span>Location</span><span>：</span><span>Wakayama, Japan</span>
+                </div>
+                <div class="info-li">
+                  <span>Birthday</span><span>：</span><span>1996/11/09</span>
+                </div>
+                <div class="info-li">
+                  <span>Job</span><span>：</span><span>ニート（通う理由がなく、専門学校退学した）</span>
+                </div>
+                <div class="info-li">
+                  <span>Love</span><span>：</span><span>アニメ, 由比ヶ浜結衣, ミライアカリ, ココロヤミ</span>
+                </div>
+              </div>
+            </section>
+          </section>
+          
+          <!--**** history ****-->
+          <section class="history-page" style="display: none">
+            <section class="page-title">
+              <div></div><div></div><div></div><div></div>
+              <h2>このサイトの歴史</h2>
+            </section>
+          </section>
+          
+          <!--**** product ****-->
+          <section class="product-page" style="display: none">
+            <section class="page-title">
+              <div></div><div></div><div></div><div></div>
+              <h2>作ったもの</h2>
+            </section>
+          </section>
+          
+          <!--**** memories ****-->
+          <section class="memories-page" style="display: none">
+            <section class="page-title">
+              <div></div><div></div><div></div><div></div>
+              <h2>思い出</h2>
+            </section>
+          </section>
+        </article>
       </section>
     </main>
     <script type="text/javascript" src="./scripts/app.min.js"></script>

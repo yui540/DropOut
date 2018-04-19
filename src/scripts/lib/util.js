@@ -10,6 +10,7 @@ const end_animation            = document.querySelector('.end-animation')
 const end_animation__end       = document.querySelector('.end-animation .window img')
 const top_page                 = document.querySelector('.top-page')
 const top_page__wrap           = document.querySelector('.top-page .wrap')
+const page_box                 = document.querySelector('.page-box')
 
 /**
  * 画像のプリロード
@@ -68,7 +69,7 @@ export const setRingSize = () => {
 }
 
 /**
- * ナビゲーションボタンホバー時のイベント監視
+ * ナビゲーションボタンの各イベント監視
  */
 export const bindNav = () => {
   const navs = document.querySelectorAll('.top-page__global-nav a')
@@ -84,6 +85,25 @@ export const bindNav = () => {
     nav.addEventListener('mouseout', e => {
       top_page.setAttribute('data-color', '')
     })
+    
+    /* click ----------------------------------------------------- */
+    nav.addEventListener('click', e => {
+      e.preventDefault()
+      const state = !(page_box.getAttribute('data-state') === 'true')
+      page_box.setAttribute('data-state', state)
+    })
+  })
+}
+
+/**
+ * ページを閉じるボタンのイベント監視
+ */
+export const bindCloseBtn = () => {
+  const close_btn = document.querySelector('.page-box__close-btn')
+  
+  close_btn.addEventListener('click', e => {
+    e.preventDefault()
+    page_box.setAttribute('data-state', 'false')
   })
 }
 
