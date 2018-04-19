@@ -1,0 +1,46 @@
+@include sp-layout {
+  .memories-page {}
+
+  .memories-box {
+    margin-top: 50px;
+    padding-bottom: 50px;
+
+    a {
+      position: relative;
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background-color: $theme-light-purple;
+      overflow: hidden;
+      padding: 5px;
+      box-sizing: border-box;
+      transition: all 0.35s ease 0s;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .title {
+        font-size: 15px;
+        color: $theme-bg;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .date {
+        font-size: 12px;
+        color: #ccc;
+        text-align: right;
+        display: block;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+    }
+    a:hover { background-color: $theme-pink; }
+  }
+}
