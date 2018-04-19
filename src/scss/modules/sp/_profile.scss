@@ -1,11 +1,8 @@
-@include tablet-layout {
+@include sp-layout {
   .profile-page {}
 
   /*** body ***/
   .profile-page__body {
-    width: 600px;
-    margin: 0 auto;
-
     .icon {
       position: relative;
       width: 150px; height: 150px;
@@ -58,14 +55,14 @@
 
       .info-li {
         position: relative;
-        width: 400px;
+        width: 80%;
         padding: 0 10px;
         margin: 0 auto;
         margin-bottom: 15px;
         border-bottom: solid 1px $theme-light-pink;
         
         span {
-          font-size: 14px;
+          font-size: 10px;
           color: $theme-light-purple;
           margin-right: 5px;
         }

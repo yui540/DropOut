@@ -1,4 +1,4 @@
-@include tablet-layout {
+@include sp-layout {
   .page-box {
     position: absolute;
     top: 0; left: 0;
@@ -42,9 +42,9 @@
   /*** content ***/
   .page-box__content {
     position: absolute;
-    top: 20px; left: 20px;
-    width: calc(100% - 40px); height: calc(100% - 40px);
-    border: solid 10px $theme-pink;
+    top: 8px; left: 8px;
+    width: calc(100% - 16px); height: calc(100% - 16px);
+    border: solid 5px $theme-pink;
     box-sizing: border-box;
     background-color: $theme-bg;
     border-radius: 15px;
@@ -56,7 +56,7 @@
     .page-title {
       position: relative;
       margin: 50px auto;
-      width: 500px; height: 45px;
+      width: 280px; height: 40px;
 
       div {
         position: absolute;
@@ -64,18 +64,18 @@
         height: 100%;
       }
       div:nth-child(1) { width: 100%; background-color: $theme-gray; }
-      div:nth-child(2) { width: calc(100% - 15px); background-color: $theme-light-purple; }
-      div:nth-child(3) { width: calc(100% - 30px); background-color: $theme-light-pink; }
-      div:nth-child(4) { width: calc(100% - 45px); background-color: $theme-pink; }
+      div:nth-child(2) { width: calc(100% - 10px); background-color: $theme-light-purple; }
+      div:nth-child(3) { width: calc(100% - 20px); background-color: $theme-light-pink; }
+      div:nth-child(4) { width: calc(100% - 30px); background-color: $theme-pink; }
 
       h2 {
         position: absolute;
         top: 0; left: 0;
-        width: 100%; height: 45px;
+        width: 100%; height: 40px;
         font-size: 20px;
         color: #fff;
         text-align: center;
-        line-height: 45px;
+        line-height: 40px;
       }
     }
   }
@@ -84,7 +84,7 @@
   .page-box__close-btn {
     position: absolute;
     top: 5px; right: 5px;
-    width: 100px; height: 100px;
+    width: 50px; height: 50px;
     display: block;
     transform: translate(calc(100% + 20px), calc(-100% + -20px));
     z-index: 5;
@@ -108,8 +108,8 @@
       &::after {
         content: ""; display: block;
         position: absolute;
-        top: 49px; left: 20px;
-        width: 60px; height: 1px;
+        top: 24px; left: 10px;
+        width: 30px; height: 1px;
         border-top: dashed 2px $theme-purple;
         box-sizing: border-box;
         opacity: 0.7;
