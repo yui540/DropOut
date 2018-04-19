@@ -1,4 +1,4 @@
-@include pc-layout {
+@include tablet-layout {
   .profile-page {}
 
   /*** body ***/
@@ -65,7 +65,7 @@
         border-bottom: solid 1px $theme-light-pink;
         
         span {
-          font-size: 12px;
+          font-size: 14px;
           color: $theme-light-purple;
           margin-right: 5px;
         }
