@@ -1,0 +1,77 @@
+@include tablet-layout {
+  .product-page {}
+
+  .product-box {
+    margin-top: 50px;
+
+    .sub-title {
+      position: relative;
+      width: 100%; height: 50px;
+      font-size: 26px;
+      color: $theme-light-purple;
+      line-height: 50px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 20px;
+
+      &:before,
+      &::after {
+        position: absolute;
+        content: ""; display: block;
+        width: 70%; height: 1px;
+        background-color: $theme-light-purple;
+        opacity: 0.6;
+      }
+      &::before { top: 0; left: 0; }
+      &::after  { bottom: 0; right: 0; }
+    }
+
+    section {
+      margin-bottom: 50px;
+
+      a {
+        position: relative;
+        display: block;
+        width: 80%;
+        background-color: #fff;
+        box-shadow: 0 0 5px #999;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        overflow: hidden;
+        padding: 5px;
+        box-sizing: border-box;
+        transition: all 0.35s ease 0s;
+
+        .name {
+          font-size: 22px;
+          color: $theme-purple;
+          padding: 5px;
+          box-sizing: border-box;
+        }
+
+        .description {
+          font-size: 16px;
+          padding: 15px 10px;
+          box-sizing: border-box;
+          color: $theme-light-purple;
+        }
+
+        .date {
+          display: block;
+          font-size: 14px;
+          text-align: right;
+          padding: 5px;
+          box-sizing: border-box;
+          color: $theme-light-purple;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+      a:hover { opacity: 0.6; }      
+  
+      &::after { content: ""; display: block; clear: both; }
+    }
+  }
+}
