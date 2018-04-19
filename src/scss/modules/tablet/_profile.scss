@@ -1,0 +1,84 @@
+@include tablet-layout {
+  .profile-page {}
+
+  /*** body ***/
+  .profile-page__body {
+    width: 600px;
+    margin: 0 auto;
+
+    .icon {
+      position: relative;
+      width: 150px; height: 150px;
+      margin: 0 auto;
+      border: solid 5px $theme-purple;
+      background-color: $theme-purple;
+      border-radius: 50%;
+      box-sizing: border-box;
+
+      &:after {
+        position: absolute;
+        top: 0; left: 0;
+        content: ""; display: block;
+        width: 100%; height: 100%;
+        border-radius: 50%;
+        background-image: url(../images/profile/yuki540.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+      div {
+        position: absolute;
+        background-color: $theme-purple;
+      }
+      div:nth-child(1) { width: 25px; height: 100px; left: 0; bottom: -5px; border-radius: 20px; }
+      div:nth-child(2) { width: 10px; height: 80px; left: 40px; bottom: -10px; border-radius: 4px; }
+      div:nth-child(3) { width: 18px; height: 80px; left: calc(50% - 6px); bottom: -50px; border-radius: 10px; }
+      div:nth-child(4) { width: 12px; height: 80px; right: 0px; bottom: -3px; border-radius: 8px; }
+    }
+
+    .name {
+      margin: 0 auto;
+      margin-top: 60px;
+      width: 150px; height: 40px;
+      border-left: solid 15px $theme-purple;
+      background-color: #fff;
+      padding: 0 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+      font-size: 25px;
+      color: #555;
+      font-weight: bold;
+      text-align: center;
+      line-height: 40px;
+      transform: rotate(-5deg);
+    }
+
+    .info {
+      margin: 0 auto;
+      margin-top: 40px;
+
+      .info-li {
+        position: relative;
+        width: 400px;
+        padding: 0 10px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        border-bottom: solid 1px $theme-light-pink;
+        
+        span {
+          font-size: 14px;
+          color: $theme-light-purple;
+          margin-right: 5px;
+        }
+
+        &::after {
+          position: absolute;
+          left: -15px; bottom: -5px;
+          content: ""; display: block;
+          width: 10px; height: 10px;
+          background-color: $theme-light-pink;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
