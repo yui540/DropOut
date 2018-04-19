@@ -6,6 +6,7 @@
     background-color: $theme-pink;
     transform-origin: right top;
     transform: rotate(90deg);
+    overflow: hidden;
     z-index: 1002;
   }
 
@@ -51,6 +52,32 @@
     overflow: auto;
     opacity: 0;
     transition: all 0.35s ease 0s;
+
+    .page-title {
+      position: relative;
+      margin: 50px auto;
+      width: 600px; height: 45px;
+
+      div {
+        position: absolute;
+        right: 0; top: 0;
+        height: 100%;
+      }
+      div:nth-child(1) { width: 100%; background-color: $theme-gray; }
+      div:nth-child(2) { width: calc(100% - 15px); background-color: $theme-light-purple; }
+      div:nth-child(3) { width: calc(100% - 30px); background-color: $theme-light-pink; }
+      div:nth-child(4) { width: calc(100% - 45px); background-color: $theme-pink; }
+
+      h2 {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 45px;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        line-height: 45px;
+      }
+    }
   }
 
   /*** close-btn ***/
