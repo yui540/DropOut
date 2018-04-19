@@ -1,6 +1,6 @@
 {
   "name": "DropOut",
-  "version": "0.0.0",
+  "version": "6.0.0",
   "description": "yuki540.com version_6.0.0",
   "main": "webpack.config.js",
   "scripts": {
