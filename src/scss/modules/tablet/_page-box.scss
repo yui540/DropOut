@@ -50,6 +50,7 @@
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.6) inset;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     transition: all 0.35s ease 0s;
 
