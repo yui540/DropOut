@@ -1,0 +1,22 @@
+@keyframes page-box__show {
+  from { transform: rotate(90deg); }
+  to   { transform: rotate(0deg); }
+}
+@keyframes page-box__hidden {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-90deg); }
+}
+
+@keyframes page-box__show-close-btn {
+  from { transform: translate(calc(100% + 20px), calc(-100% + -20px)); }
+  to   { transform: translate(0, 0); }
+}
+@keyframes page-box__rotate-close-btn {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(15deg); }
+}
+
+@keyframes page-box__show-content {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
