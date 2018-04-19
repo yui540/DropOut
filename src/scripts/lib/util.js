@@ -90,7 +90,10 @@ export const bindNav = () => {
     nav.addEventListener('click', e => {
       e.preventDefault()
       const state = !(page_box.getAttribute('data-state') === 'true')
+      const href = e.target.getAttribute('data-href')
+      
       page_box.setAttribute('data-state', state)
+      showPage(href)
     })
   })
 }
@@ -104,7 +107,26 @@ export const bindCloseBtn = () => {
   close_btn.addEventListener('click', e => {
     e.preventDefault()
     page_box.setAttribute('data-state', 'false')
+    hiddenPage()
   })
+}
+
+/**
+ * 対象のページを表示
+ * @param : selector
+ */
+export const showPage = selector => {
+  document.querySelector(`.${ selector }`).style.display = 'block'
+}
+
+/**
+ * 全てのページを非表示
+ */
+export const hiddenPage = () => {
+  document.querySelector('.profile-page').style.display = 'none'
+  document.querySelector('.history-page').style.display = 'none'
+  document.querySelector('.memories-page').style.display = 'none'
+  document.querySelector('.product-page').style.display = 'none'
 }
 
 /**
