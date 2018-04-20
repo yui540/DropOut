@@ -130,6 +130,34 @@ export const hiddenPage = () => {
 }
 
 /**
+ * スキップボタンの表示
+ */
+export const showSkipButton = () => {
+  const skip_button = document.getElementById('skip-button')
+  skip_button.setAttribute('data-state', 'true')
+
+  /* click ---------------------------------------------------------------- */
+  skip_button.addEventListener('click', e => {
+    e.target.setAttribute('data-state', 'false')
+    skipAnimation()
+  })
+
+  setTimeout(() => { skip_button.setAttribute('data-state', 'false') }, 5000)
+}
+
+/**
+ * アニメーションをスキップ
+ */
+export const skipAnimation = () => {
+  if(load_view)     root.removeChild(load_view)
+  if(gab_animation) root.removeChild(gab_animation)
+  if(calling)       root.removeChild(calling)
+  if(end_animation) root.removeChild(end_animation)
+
+  top_page.setAttribute('data-state', 'start')
+}
+
+/**
  * ロードの開始タイミングを取得
  * @param fn : コールバック関数
  */
