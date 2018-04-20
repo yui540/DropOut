@@ -1,0 +1,71 @@
+@include pc-layout {
+  #skip-button {
+    position: absolute;
+    bottom: 50px; right: 0;
+    width: 160px; height: 60px;
+    background-color: $theme-mint;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 30px;
+    color: $theme-purple;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    transform: translateX(100%);
+    transition: all 0.3s ease 0s;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+@include tablet-layout {
+  #skip-button {
+    position: absolute;
+    bottom: 50px; right: 0;
+    width: 160px; height: 60px;
+    background-color: $theme-mint;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 30px;
+    color: $theme-purple;
+    text-align: center;
+    line-height: 60px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    transform: translateX(100%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+@include sp-layout {
+  #skip-button {
+    position: absolute;
+    bottom: 50px; right: 0;
+    width: 100px; height: 45px;
+    background-color: $theme-mint;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    color: $theme-purple;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+    transform: translateX(100%);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+
+#skip-button:hover {
+  color: #fff;
+  background-color: $theme-pink;
+}
+
+#skip-button[data-state="true"] {
+  transform: translateX(0%);
+}
+
+#skip-button[data-state="false"] {
+  transform: translateX(100%);
+}
