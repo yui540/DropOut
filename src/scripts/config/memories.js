@@ -1,5 +1,17 @@
 export default [
   {
+    "title": "専門学校に入学して3ヶ月で絶望し、退学してニートになった男の話",
+    "thumb": "./images/memories/neet_blog.png",
+    "link": "https://yuki540.hatenablog.jp/entry/2018/04/10/%E5%B0%82%E9%96%80%E5%AD%A6%E6%A0%A1%E3%81%AB%E5%85%A5%E5%AD%A6%E3%81%97%E3%81%A63%E3%83%B6%E6%9C%88%E3%81%A7%E7%B5%B6%E6%9C%9B%E3%81%97%E3%80%81%E9%80%80%E5%AD%A6%E3%81%97%E3%81%A6%E3%83%8B%E3%83%BC",
+    "date": "2018/04/10"
+  },
+  {
+    "title": "ShuviがMOONGIFTで紹介される",
+    "thumb": "./images/memories/moongift_shuvi.png",
+    "link": "https://www.moongift.jp/2018/04/shuvi-%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E6%B2%A1%E5%85%A5%E5%9E%8Byoutube%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC/",
+    "date": "2018/04/07"
+  },
+  {
     "title": "英語できないことが界隈に広まる",
     "thumb": "./images/memories/issue.png",
     "link": "https://togetter.com/li/1188562",
