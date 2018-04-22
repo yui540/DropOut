@@ -1,7 +1,7 @@
 {
   "name": "DropOut",
   "version": "6.0.0",
-  "description": "yuki540.com version_6.0.0",
+  "description": "magical-girl.site version_6.0.0",
   "main": "webpack.config.js",
   "scripts": {
     "start": "ruby -run -e httpd public 8080",
