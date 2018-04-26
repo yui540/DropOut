@@ -1,4 +1,10 @@
 export default [
+	{
+    "title": "DropOutがホットエントリーに載る",
+    "thumb": "./images/memories/dropout.png",
+    "link": "http://b.hatena.ne.jp/entry/s/magical-girl.site",
+    "date": "2018/04/25"
+  },
   {
     "title": "専門学校に入学して3ヶ月で絶望し、退学してニートになった男の話",
     "thumb": "./images/memories/neet_blog.png",
