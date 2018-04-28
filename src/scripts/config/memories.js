@@ -1,4 +1,10 @@
 export default [
+{
+    "title": "ミライアカリを運営している株式会社DUOにオフィス見学！",
+    "thumb": "./images/memories/duo.png",
+    "link": "https://twitter.com/eriri_jp/status/989819827542933504",
+    "date": "2018/04/27"
+  },
 	{
     "title": "DropOutがホットエントリーに載る",
     "thumb": "./images/memories/dropout.png",
