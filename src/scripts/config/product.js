@@ -36,6 +36,31 @@ export default {
       "date": "2017/04/15"
     }
   ],
+  "works": [
+  	{
+      "name": "初音ミク HomeLive in Gatebox",
+      "link": "https://gatebox.ai/homelive/",
+      "thumb": "./images/product/gatebox.png",
+      "description": "コーディング&アニメーションを担当。Webデザインは@KmGraphさんです。ロゴデザインは@reku_ALさんです。",
+      "date": "2018/04/28"
+    }
+  ],
+  "design": [
+    {
+      "name": "ChocolateCake",
+      "link": "https://chocolate-cake.yuki540.com/",
+      "thumb": "./images/product/chocolate-cake.png",
+      "description": "僕が作ったCSS Animation作品をまとめたサイト",
+      "date": "2018/03/22"
+    },
+    {
+      "name": "俺ガイル非公式サイト",
+      "link": "http://oregairu.yuki540.com",
+      "thumb": "./images/product/oregairu.png",
+      "description": "『俺は、本物が欲しい。』",
+      "date": "2016/03/20"
+    }
+  ],
   "lib": [
     {
       "name": "shuvi-lib",
@@ -57,22 +82,6 @@ export default {
       "thumb": "./images/product/nicoJS.png",
       "description": "ニコニコ風コメントを実装するライブラリ",
       "date": "2016/09/25"
-    }
-  ],
-  "design": [
-    {
-      "name": "ChocolateCake",
-      "link": "https://chocolate-cake.yuki540.com/",
-      "thumb": "./images/product/chocolate-cake.png",
-      "description": "僕が作ったCSS Animation作品をまとめたサイト",
-      "date": "2018/03/22"
-    },
-    {
-      "name": "俺ガイル非公式サイト",
-      "link": "http://oregairu.yuki540.com",
-      "thumb": "./images/product/oregairu.png",
-      "description": "『俺は、本物が欲しい。』",
-      "date": "2016/03/20"
     }
   ],
   "movie": [

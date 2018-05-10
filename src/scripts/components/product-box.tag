@@ -10,13 +10,13 @@
       </a>
     </section>
 
-    <h3 class="sub-title">ライブラリ</h3>
+    <h3 class="sub-title">お仕事の実績</h3>
     <section>
-      <a each={ lib, key in opts.products.lib } href={ lib.link } target="_blank">
-        <img src={ lib.thumb } alt={ lib.name } />
-        <h4 class="name">{ lib.name }</h4>
-        <p class="description">{ lib.description }</p>
-        <small class="date">{ lib.date }</small>
+      <a each={ work, key in opts.products.works } href={ work.link } target="_blank">
+        <img src={ work.thumb } alt={ work.name } />
+        <h4 class="name">{ work.name }</h4>
+        <p class="description">{ work.description }</p>
+        <small class="date">{ work.date }</small>
       </a>
     </section>
 
@@ -27,6 +27,16 @@
         <h4 class="name">{ design.name }</h4>
         <p class="description">{ design.description }</p>
         <small class="date">{ design.date }</small>
+      </a>
+    </section>
+    
+    <h3 class="sub-title">ライブラリ</h3>
+    <section>
+      <a each={ lib, key in opts.products.lib } href={ lib.link } target="_blank">
+        <img src={ lib.thumb } alt={ lib.name } />
+        <h4 class="name">{ lib.name }</h4>
+        <p class="description">{ lib.description }</p>
+        <small class="date">{ lib.date }</small>
       </a>
     </section>
 
