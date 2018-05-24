@@ -4,7 +4,7 @@
   "description": "magical-girl.site version_6.0.0",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "ruby -run -e httpd public 8080",
+    "start": "http-server -p 8080 public",
     "build": "webpack --progress --colors",
     "watch": "webpack --watch --colors"
   },
@@ -20,6 +20,7 @@
     "css-loader": "^0.28.11",
     "dotenv": "^5.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "http-server": "^0.11.1",
     "node-sass": "^4.8.3",
     "node-sass-glob-importer": "^5.1.1",
     "riot": "^3.9.0",
