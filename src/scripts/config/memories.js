@@ -1,5 +1,5 @@
 export default [
-{
+  {
     "title": "ミライアカリを運営している株式会社DUOにオフィス見学！",
     "thumb": "./images/memories/duo.png",
     "link": "https://twitter.com/eriri_jp/status/989819827542933504",
@@ -22,6 +22,12 @@ export default [
     "thumb": "./images/memories/moongift_shuvi.png",
     "link": "https://www.moongift.jp/2018/04/shuvi-%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AC%E3%82%B9%E3%81%AA%E6%B2%A1%E5%85%A5%E5%9E%8Byoutube%E3%83%97%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC/",
     "date": "2018/04/07"
+  },
+  {
+    "title": "兎亜がMOONGIFTで紹介される",
+    "thumb": "./images/memories/moongift_toa.png",
+    "link": "https://www.moongift.jp/2018/01/%E5%85%8E%E4%BA%9C-%E5%B0%8F%E3%81%95%E3%81%AA%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E3%81%A7%E4%BD%BF%E3%81%84%E3%82%84%E3%81%99%E3%81%84%E9%9F%B3%E6%A5%BD%E3%83%97%E3%83%AC%E3%82%A4/",
+    "date": "2018/01/31"
   },
   {
     "title": "英語できないことが界隈に広まる",
@@ -68,14 +74,8 @@ export default [
   {
     "title": "Pixivの脆弱性を報告し、5000円&5pts獲得",
     "thumb": "./images/memories/pixiv_xss.png",
-    "link": "http://yuki540.hatenablog.jp/entry/2017/07/03/Pixiv%E3%81%AE%E8%84%86%E5%BC%B1%E6%80%A7%28Reflected_XSS%29%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%81%A6%E3%80%815000%E5%86%86%E8%B2%B0%E3%81%A3%E3%81%9F%E8%A9%B1",
+    "link": "https://twitter.com/eriri_jp/status/877135850781384704",
     "date": "2017/06/20"
-  },
-  {
-    "title": "LiveDライクなオープンソースソフトウェアの開発",
-    "thumb": "./images/memories/live2d_like.png",
-    "link": "http://niconare.nicovideo.jp/watch/kn2342",
-    "date": "2017/02/26"
   },
   {
     "title": "日本最大の図書館検索サイト カーリルの脆弱性を報告",
