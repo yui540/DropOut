@@ -1,5 +1,5 @@
 # DropOut
-「DropOut」は、yuki540のポートフォリオサイトのversion_6.0.0です。
+「DropOut」は、yui540のポートフォリオサイトのversion_6.0.0です。
 
 『僕は魔法少女-----そう思っていた』
 
@@ -10,8 +10,8 @@
 - このサイトでの推しキャラ
   - ガヴリール（ガヴリールドロップアウト）
 - デザイン・モーション・コーディング
-  - yuki540
-  - [Twitter - @eriri_jp](https://twitter.com/eriri_jp)
+  - yui540
+  - [Twitter - @yui540](https://twitter.com/yui540)
 
 ## 50秒越えの圧倒的CSS Animation
 このサイトのアニメーション部分は全てCSS Animationで実現されています。
