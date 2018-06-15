@@ -16,7 +16,7 @@
     -->
     <title>魔法少女サイト - DropOut</title>
     <meta name="description" content="『僕は魔法少女------そう思っていた』">
-    <meta name="keywords" content="魔法少女サイト,yuki540,satella.io,yuki540.com,DropOut">
+    <meta name="keywords" content="魔法少女サイト,yui540,satella.io,magical-girl.site,DropOut">
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
     <meta property="og:url" content="https://magical-girl.site">
     <meta property="og:image" content="https://magical-girl.site/images/ogp.png">
@@ -26,12 +26,14 @@
     <meta property="og:description" content="『僕は魔法少女------そう思っていた』">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@eriri_jp" />
+    <meta name="twitter:site" content="@yui540" />
     <meta name="twitter:title" content="魔法少女サイト - DropOut" />
     <meta name="twitter:description" content="『僕は魔法少女------そう思っていた』" />
     <meta name="twitter:image" content="https://magical-girl.site/images/ogp.png" />
-    <link rel="shortcut icon" href="https://magical-girl.site/images/profile/yui540.png" />
-    <link rel="apple-touch-icon" href="https://magical-girl.site/images/profile/yui540.png" />
+    <meta name="theme-color" content="#484053" />
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" href="https://magical-girl.site/images/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="https://magical-girl.site/images/icons/icon-192.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="./stylesheets/font.css" />
     <link rel="stylesheet" href="./stylesheets/style.css" />
@@ -43,6 +45,14 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-53682384-7');
+    </script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(() => {
+            console.log('Service Worker Registered.')
+          })
+      }
     </script>
   </head>
   <body>
