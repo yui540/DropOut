@@ -47,18 +47,18 @@ export default {
   ],
   "design": [
     {
+      "name": "由比ヶ浜結衣生誕2018 - 非公式サイト",
+      "link": "https://yui.magical-girl.site/",
+      "thumb": "./images/product/yui.png",
+      "description": "『ありがと...バカ』",
+      "date": "2018/06/18"
+    },
+    {
       "name": "ChocolateCake",
       "link": "https://chocolate-cake.yuki540.com/",
       "thumb": "./images/product/chocolate-cake.png",
       "description": "僕が作ったCSS Animation作品をまとめたサイト",
       "date": "2018/03/22"
-    },
-    {
-      "name": "俺ガイル非公式サイト",
-      "link": "http://oregairu.yuki540.com",
-      "thumb": "./images/product/oregairu.png",
-      "description": "『俺は、本物が欲しい。』",
-      "date": "2016/03/20"
     }
   ],
   "lib": [
