@@ -260,8 +260,8 @@
   /*** sns ***/
   .top-page__sns {
     position: absolute;
-    top: calc(50% - 75px); left: 0px;
-    width: 50px; height: 150px;
+    top: calc(50% - 100px); left: 0px;
+    width: 50px; height: 200px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     border-top-right-radius: 5px;
@@ -304,6 +304,9 @@
     a:nth-child(3) {
       i { font-size: 22px; }
       &::before { background-color: $theme-light-pink; }
+    }
+    a:nth-child(4) {
+      &::before { background-color: #C7B3D6; }
     }
   }
 

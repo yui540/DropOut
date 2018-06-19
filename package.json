@@ -1,7 +1,7 @@
 {
   "name": "DropOut",
   "version": "6.0.0",
-  "description": "magical-girl.site version_6.0.0",
+  "description": "magical-girl.site version_6.0.1",
   "main": "webpack.config.js",
   "scripts": {
     "start": "http-server -p 8080 public",

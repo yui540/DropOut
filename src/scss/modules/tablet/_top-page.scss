@@ -259,17 +259,18 @@
   /*** sns ***/
   .top-page__sns {
     position: absolute;
-    top: calc(50% - 75px); left: 0px;
-    width: 50px; height: 150px;
+    bottom: 0; left: calc(50% - 100px);
+    width: 200px; height: 50px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     overflow: hidden;
-    transform: translateX(calc(-100% + -5px));
+    transform: translateY(calc(100% + 5px));
     z-index: 1;
 
     a {
+      float: left;
       position: relative;
       display: block;
       width: 50px; height: 50px;
@@ -279,7 +280,7 @@
         top: 0; left: 0;
         content: ""; display: block;
         width: 100%; height: 100%;
-        transform: translateX(-100%);
+        transform: translateY(100%);
         transition: all 0.25s ease 0s;
       }
 
@@ -293,7 +294,7 @@
         color: $theme-light-purple;
       }
     }
-    a:hover:before { transform: translateX(0); }
+    a:hover:before { transform: translateY(0); }
     a:nth-child(1) {
       &::before { background-color: $theme-mint; }
     }
@@ -303,6 +304,9 @@
     a:nth-child(3) {
       i { font-size: 22px; }
       &::before { background-color: $theme-light-pink; }
+    }
+    a:nth-child(4) {
+      &::before { background-color: #C7B3D6; }
     }
   }
 
@@ -396,7 +400,7 @@
     }
 
     /*** sns ***/
-    .top-page__sns { animation: slide-right 0.4s ease 3s forwards; }
+    .top-page__sns { animation: slide-top 0.4s ease 3s forwards; }
     
     /*** share-btn ***/
     .top-page__share-btn { animation: slide-left 0.4s ease 3s forwards; }
