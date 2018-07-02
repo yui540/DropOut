@@ -1,4 +1,4 @@
-const CACHE_NAME = 'magical-girl.site_version6.0.1'
+const CACHE_NAME = 'magical-girl.site_version6.0.2'
 const urlsToCache = [
   '/',
   '/stylesheets/font.css',

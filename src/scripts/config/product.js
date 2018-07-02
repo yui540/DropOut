@@ -43,6 +43,13 @@ export default {
       "thumb": "./images/product/gatebox.png",
       "description": "コーディング&アニメーションを担当。Webデザインは@KmGraphさんです。ロゴデザインは@reku_ALさんです。",
       "date": "2018/04/28"
+    },
+    {
+      "name": "ひまわり鎮痛剤 Webサイト",
+      "link": "https://sai-chan.com/",
+      "thumb": "./images/product/sai-chan.png",
+      "description": "同人サークル「ひまわり鎮痛剤」のwebサイトを製作させていただきました",
+      "date": "2018/07/02"
     }
   ],
   "design": [
