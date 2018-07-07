@@ -29,6 +29,13 @@ export default {
       "date": "2017/04/08"
     },
     {
+      "name": "HyperAkari",
+      "link": "https://github.com/yui540/hyper-akari",
+      "thumb": "./images/product/hyper-akari.png",
+      "description": "ターミナルエミュレータ「Hyper」の「ミライアカリ」テーマプラグイン",
+      "date": "2018/07/07"
+    },
+    {
       "name": "音卵",
       "link": "https://github.com/yuki540net/ontama",
       "thumb": "./images/product/ontama.png",
