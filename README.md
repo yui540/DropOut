@@ -3,7 +3,7 @@
 
 『僕は魔法少女-----そう思っていた』
 
-🎉 [magical-girl.site](https://magical-girl.site) 🎉
+🎉 [Try It Online](https://yui540.github.io/DropOut/) 🎉
 
 ![1](./res/1.png)
 
