@@ -1,9 +1,12 @@
 # DropOut
+
+[![Build and Deploy](https://github.com/yui540/DropOut/actions/workflows/build.yml/badge.svg)](https://github.com/yui540/DropOut/actions/workflows/build.yml)
+
 「DropOut」は、yui540のポートフォリオサイトのversion_6.0.0です。
 
 『僕は魔法少女-----そう思っていた』
 
-🎉 [magical-girl.site](https://magical-girl.site) 🎉
+🎉 [Try It Online](https://yui540.github.io/DropOut/) 🎉
 
 ![1](./res/1.png)
 
